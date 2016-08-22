@@ -11,6 +11,7 @@ storiesOf('Row', module)
       <Row />
     </div>
   ), { header: false, inline: true, propTables: [Row] })
+  /* eslint-disable max-len */
   .addWithInfo('Advanced', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
   `, () => (
@@ -19,3 +20,4 @@ storiesOf('Row', module)
       <Row />
     </div>
   ), { header: false, inline: true })
+  /* eslint-enable */
