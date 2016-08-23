@@ -167,6 +167,7 @@ storiesOf('renderInput', module)
       </nav>
     </div>
   ), { header: false, inline: true, propTables: null })
+  /*
   .addWithInfo('Async Validation', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
   `, () => (
@@ -187,4 +188,5 @@ storiesOf('renderInput', module)
       />
     </div>
   ), { header: false, inline: true, propTables: null })
+  */
   /* eslint-enable */
