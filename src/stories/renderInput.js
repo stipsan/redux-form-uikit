@@ -1,7 +1,6 @@
 import { storiesOf } from '@kadira/storybook'
-import { PropTypes } from 'react'
 import { Field } from 'redux-form'
-import { Button } from 'uikit-react'
+import { Button, Input } from 'uikit-react'
 
 import renderInput from '../renderInput'
 
@@ -9,9 +8,14 @@ import renderInput from '../renderInput'
 renderInput.displayName = 'renderInput'
 
 // Make sure only user-land propTypes are shown (and not props relevant to redux-form internals)
+/* eslint-disable no-unused-vars */
+const { input: skipInput, meta: skipMeta, ...renderInputPropTypes } = renderInput.propTypes
+const { danger: skipDanger, success: skipSuccess, ...InputPropTypes } = Input.propTypes
+/* eslint-enable*/
 const InputProps = () => <input />
 InputProps.propTypes = {
-  icon: PropTypes.string,
+  ...InputPropTypes,
+  ...renderInputPropTypes,
 }
 InputProps.displayName = 'renderInput'
 
@@ -21,32 +25,83 @@ storiesOf('renderInput', module)
   ---
   \`renderInput\` is wrapping the \`<Input />\` component from [\`uikit-react\`](https://uikit-react.io).
 
-  More information on supported props can be seen [here](http://uikit-react.io/?selectedKind=Input&selectedStory=Basic%20Usage&full=0&down=1&left=1&panelRight=0).
+  More information on supported props can be seen [here](http://uikit-react.io/input).
   `, () => (
     <div className="uk-margin-bottom">
       <Field
+        component={renderInput}
         name="email"
         placeholder="E-mail"
         type="email"
-        component={renderInput}
       />
       <Field
+        component={renderInput}
         name="password"
         placeholder="Password"
         type="password"
-        component={renderInput}
       />
       <div className="uk-form-row">
         <Button type="submit">Submit</Button>
       </div>
     </div>
   ), { header: false, inline: true, propTables: [InputProps] })
-  .addWithInfo('Advanced', `
+  .addWithInfo('Stacked Form', '', () => (
+    <div className="uk-margin-bottom uk-form-stacked">
+      <Field
+        component={renderInput}
+        name="email"
+        label="E-mail"
+        type="email"
+      />
+      <Field
+        component={renderInput}
+        name="password"
+        label="Password"
+        type="password"
+      />
+      <div className="uk-form-row">
+        <Button type="submit">Submit</Button>
+      </div>
+    </div>
+  ), { header: false, inline: true, propTables: null })
+  .addWithInfo('Horizontal Form', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
   `, () => (
     <div className="uk-margin-bottom">
-
-      <Field name="email" component={renderInput} />
+      <Field
+        component={renderInput}
+        name="email"
+      />
+    </div>
+  ), { header: false, inline: true, propTables: null })
+  .addWithInfo('Inline Form', `
+  If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
+  `, () => (
+    <div className="uk-margin-bottom">
+      <Field
+        component={renderInput}
+        name="email"
+      />
+    </div>
+  ), { header: false, inline: true, propTables: null })
+  .addWithInfo('Async Validation', `
+  If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
+  `, () => (
+    <div className="uk-margin-bottom">
+      <Field
+        component={renderInput}
+        name="email"
+      />
+    </div>
+  ), { header: false, inline: true, propTables: null })
+  .addWithInfo('Transition Validation Feedback', `
+  If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
+  `, () => (
+    <div className="uk-margin-bottom">
+      <Field
+        component={renderInput}
+        name="email"
+      />
     </div>
   ), { header: false, inline: true, propTables: null })
   /* eslint-enable */

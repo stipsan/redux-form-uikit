@@ -1,11 +1,11 @@
 import renderer from 'react-test-renderer'
 
-import Input from '../Input'
+import renderInput from '../renderInput'
 
-describe('Input', () => {
+describe('renderInput', () => {
   it('renders correctly', () => {
     expect(renderer.create(
-      <Input />
+      <renderInput />
     ).toJSON()).toMatchSnapshot()
   })
 })
