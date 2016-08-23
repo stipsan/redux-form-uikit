@@ -1,6 +1,6 @@
 import cx from 'classnames'
 import { PropTypes } from 'react'
-import { Input as UKInput } from 'uikit-react'
+import { Input as UkInput } from 'uikit-react'
 // import FieldPropTypes from 'redux-form-uikit/PropTypes/Field'
 
 const Input = ({
@@ -9,20 +9,23 @@ const Input = ({
   icon,
   label,
   ...custom,
-}) => (
-  <div className={cx('uk-form-row')}>
-    <UKInput
-      autoComplete={input.name}
-      placeholder={label}
-      {...input}
-      {...custom}
-      danger={touched && error}
-    />
-    {touched && error && <p className="uk-form-help-block uk-text-left">
-      {error}
-    </p>}
-  </div>
-)
+}) => {
+  return (
+    <div className={cx('uk-form-row')}>
+      <UkInput
+        autoComplete={input.name}
+        placeholder={label}
+        {...input}
+        {...custom}
+        danger={touched && error}
+      />
+      {touched && error && <p className="uk-form-help-block uk-text-left">
+        {error}
+      </p>}
+    </div>
+  )
+}
+
 
 Input.propTypes = {
   // ...FieldPropTypes,

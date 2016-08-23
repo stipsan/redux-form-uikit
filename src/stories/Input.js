@@ -7,18 +7,26 @@ import Input from '../Input'
 // This is to work around: https://github.com/kadirahq/react-storybook-addon-info/issues/26#issuecomment-229029177
 Input.displayName = 'Input'
 
+const InputProps = () => <input />
+
 storiesOf('Input', module)
-  .addWithInfo('Basic Usage', '', () => (
+  /* eslint-disable max-len */
+  .addWithInfo('Basic Usage', `
+  ---
+  \`renderInput\` is wrapping the \`<Input />\` component from [\`uikit-react\`](https://uikit-react.io).
+
+  More information on supported props can be seen [here](http://uikit-react.io/?selectedKind=Input&selectedStory=Basic%20Usage&full=0&down=1&left=1&panelRight=0).
+  `, () => (
     <div className="uk-margin-bottom">
       <Field
         name="email"
-        label="E-mail"
+        placeholder="E-mail"
         type="email"
         component={Input}
       />
       <Field
         name="password"
-        label="Password"
+        placeholder="Password"
         type="password"
         component={Input}
       />
@@ -27,7 +35,6 @@ storiesOf('Input', module)
       </div>
     </div>
   ), { header: false, inline: true, propTables: [Input] })
-  /* eslint-disable max-len */
   .addWithInfo('Advanced', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
   `, () => (
