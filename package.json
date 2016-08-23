@@ -87,7 +87,7 @@
     "react-test-renderer": "15.3.1",
     "style-loader": "0.13.1",
     "uikit": "2.26.4",
-    "uikit-react": "0.6.0",
+    "uikit-react": "0.6.1",
     "url-loader": "0.5.7"
   },
   "peerDependencies": {
