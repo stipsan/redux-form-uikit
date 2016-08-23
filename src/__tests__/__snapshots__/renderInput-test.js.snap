@@ -24,6 +24,46 @@ exports[`renderInput allows overriding defaults 1`] = `
 </div>
 `;
 
+exports[`renderInput prevents overriding the danger prop on <Input /> 1`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+</div>
+`;
+
+exports[`renderInput prevents overriding the danger prop on <Input /> 2`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className="uk-form-danger"
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+  <p
+    className="uk-form-help-inline">
+    Required
+  </p>
+</div>
+`;
+
 exports[`renderInput prioritizes error over help 1`] = `
 <div
   className="uk-form-row">
@@ -148,7 +188,7 @@ exports[`renderInput renders correctly 1`] = `
 
 exports[`renderInput renders correctly 2`] = `
 <div
-  className="uk-form-row">
+  className="uk-display-inline-block">
   <label
     className="uk-form-label"
     htmlFor="email">

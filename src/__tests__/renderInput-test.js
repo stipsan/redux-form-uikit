@@ -42,6 +42,7 @@ describe('renderInput', () => {
     expect(renderer.create(
       <RenderInput
         {...props}
+        inline
         label="E-mail"
         type="email"
       />
@@ -225,6 +226,27 @@ describe('renderInput', () => {
         id="email-confirm"
         label="E-mail"
         placeholder="Confirm E-mail"
+      />
+    ).toJSON()).toMatchSnapshot()
+  })
+
+  it('prevents overriding the danger prop on <Input />', () => {
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        danger
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        danger={false}
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Required',
+        }}
       />
     ).toJSON()).toMatchSnapshot()
   })
