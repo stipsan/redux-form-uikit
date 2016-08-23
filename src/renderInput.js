@@ -24,7 +24,16 @@ const renderInput = ({
     ...custom,
     danger: touched && !!error,
   }
-  const component = <Input {...props} />
+  const component = (
+    <Input
+      autoComplete={input.name}
+      placeholder={label}
+      id={label ? input.name : undefined}
+      {...input}
+      {...custom}
+      danger={touched && !!error}
+    />
+  )
 
   const errorMessage = touched && error && (
     <p className={cx(`uk-form-help-${errorDisplay}`, errorClassName)}>
