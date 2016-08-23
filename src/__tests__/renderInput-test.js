@@ -277,17 +277,5 @@ describe('renderInput', () => {
         }}
       />
     ).toJSON()).toMatchSnapshot()
-
-    expect(renderer.create(
-      <RenderInput
-        {...props}
-        meta={{
-          ...defaultProps.meta,
-          asyncValidating: false,
-          touched: true,
-          pristine: false,
-        }}
-      />
-    ).toJSON()).toMatchSnapshot()
   })
 })

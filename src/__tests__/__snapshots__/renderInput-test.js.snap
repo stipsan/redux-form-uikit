@@ -171,18 +171,23 @@ exports[`renderInput prioritizes error over help 4`] = `
 exports[`renderInput renders asyncValidating status correctly 1`] = `
 <div
   className="uk-form-row">
-  <input
-    autoComplete="email"
-    className=""
-    id={undefined}
-    name="email"
-    onBlur={[Function onBlur]}
-    onChange={[Function onChange]}
-    onDragStart={[Function onDragStart]}
-    onDrop={[Function onDrop]}
-    onFocus={[Function onFocus]}
-    placeholder="E-mail"
-    value="" />
+  <div
+    className="uk-form-icon">
+    <i
+      className="uk-icon-spinner" />
+    <input
+      autoComplete="email"
+      className=""
+      id={undefined}
+      name="email"
+      onBlur={[Function onBlur]}
+      onChange={[Function onChange]}
+      onDragStart={[Function onDragStart]}
+      onDrop={[Function onDrop]}
+      onFocus={[Function onFocus]}
+      placeholder="E-mail"
+      value="" />
+  </div>
 </div>
 `;
 
@@ -192,7 +197,7 @@ exports[`renderInput renders asyncValidating status correctly 2`] = `
   <div
     className="uk-form-icon">
     <i
-      className="uk-icon-envelope" />
+      className="uk-icon-spinner" />
     <input
       autoComplete="email"
       className=""
@@ -207,24 +212,6 @@ exports[`renderInput renders asyncValidating status correctly 2`] = `
       placeholder="E-mail"
       value="" />
   </div>
-</div>
-`;
-
-exports[`renderInput renders asyncValidating status correctly 3`] = `
-<div
-  className="uk-form-row">
-  <input
-    autoComplete="email"
-    className=""
-    id={undefined}
-    name="email"
-    onBlur={[Function onBlur]}
-    onChange={[Function onChange]}
-    onDragStart={[Function onDragStart]}
-    onDrop={[Function onDrop]}
-    onFocus={[Function onFocus]}
-    placeholder="E-mail"
-    value="" />
 </div>
 `;
 

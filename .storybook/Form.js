@@ -13,6 +13,20 @@ Form.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 }
 
+const sleep = ms => new Promise(resolve => setTimeout(resolve, ms))
+
+const asyncValidate = values => {
+  if (values.username === undefined) {
+    return new Promise(resolve => resolve())
+  }
+  return sleep(1000)
+    .then(() => {
+      if (['batman', 'superman'].includes(values.username)) {
+        throw { username: 'That username is taken' }
+      }
+    })
+}
+
 const validate = values => {
   const errors = {}
   if (!values.email) {
@@ -39,5 +53,7 @@ export default connect()(
     form: 'demo',
     onSubmit: action('onSubmit'),
     validate,
+    asyncValidate,
+    asyncBlurFields: ['username'],
   })(Form)
 )

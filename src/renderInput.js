@@ -19,12 +19,11 @@ const renderInput = ({
     <Input
       autoComplete={input.name}
       id={label ? input.name : undefined}
-      icon={asyncValidating === true && 'spinner'}
-      success={asyncValidating === false}
       placeholder={label}
       {...input}
       {...custom}
       danger={touched && !!error}
+      icon={asyncValidating === true ? 'spinner' : custom.icon}
     />
   )
 

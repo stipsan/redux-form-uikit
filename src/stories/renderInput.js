@@ -170,17 +170,23 @@ storiesOf('renderInput', module)
       </nav>
     </div>
   ), { header: false, inline: true, propTables: null })
-  /*
   .addWithInfo('Async Validation', `
-  If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
+  Try entering \`batman\` or \`superman\`.
   `, () => (
     <div className="uk-margin-bottom">
       <Field
         component={renderInput}
-        name="email"
+        icon="user"
+        name="username"
       />
+      <div className="uk-form-row">
+        <Button primary type="submit">
+          Register <i className="uk-icon-chevron-circle-right" />
+        </Button>
+      </div>
     </div>
   ), { header: false, inline: true, propTables: null })
+  /*
   .addWithInfo('Transition Validation Feedback', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
   `, () => (
