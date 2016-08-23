@@ -8,7 +8,7 @@ describe('renderInput', () => {
   // @TODO investigate if we can just grab the default props directly from redux-form/Field
   const defaultProps = {
     input: {
-      name: 'email',
+      name: '',
       onBlur: () => {},
       onChange: () => {},
       onDragStart: () => {},
@@ -32,7 +32,22 @@ describe('renderInput', () => {
     ).toJSON()).toMatchSnapshot()
 
     expect(renderer.create(
-      <RenderInput {...defaultProps} label="E-mail" />
+      <RenderInput
+        {...defaultProps}
+        label="E-mail"
+        name="email"
+        type="email"
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...defaultProps}
+        help="This message is replaced by any validation errors."
+        label="E-mail"
+        name="email"
+        type="email"
+      />
     ).toJSON()).toMatchSnapshot()
   })
 })

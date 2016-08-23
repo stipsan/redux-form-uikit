@@ -2,10 +2,10 @@ exports[`renderInput renders correctly 1`] = `
 <div
   className="uk-form-row">
   <input
-    autoComplete="email"
+    autoComplete=""
     className=""
     id={undefined}
-    name="email"
+    name=""
     onBlur={[Function onBlur]}
     onChange={[Function onChange]}
     onDragStart={[Function onDragStart]}
@@ -21,15 +21,15 @@ exports[`renderInput renders correctly 2`] = `
   className="uk-form-row">
   <label
     className="uk-form-label"
-    htmlFor="email">
+    htmlFor="">
     E-mail
   </label>
   <div
     className="uk-form-controls">
     <input
-      autoComplete="email"
+      autoComplete=""
       className=""
-      id="email"
+      id=""
       name="email"
       onBlur={[Function onBlur]}
       onChange={[Function onChange]}
@@ -37,7 +37,39 @@ exports[`renderInput renders correctly 2`] = `
       onDrop={[Function onDrop]}
       onFocus={[Function onFocus]}
       placeholder="E-mail"
+      type="email"
       value="" />
+  </div>
+</div>
+`;
+
+exports[`renderInput renders correctly 3`] = `
+<div
+  className="uk-form-row">
+  <label
+    className="uk-form-label"
+    htmlFor="">
+    E-mail
+  </label>
+  <div
+    className="uk-form-controls">
+    <input
+      autoComplete=""
+      className=""
+      id=""
+      name="email"
+      onBlur={[Function onBlur]}
+      onChange={[Function onChange]}
+      onDragStart={[Function onDragStart]}
+      onDrop={[Function onDrop]}
+      onFocus={[Function onFocus]}
+      placeholder="E-mail"
+      type="email"
+      value="" />
+    <p
+      className="uk-form-help-inline">
+      This message is replaced by any validation errors.
+    </p>
   </div>
 </div>
 `;

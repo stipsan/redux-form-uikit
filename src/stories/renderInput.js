@@ -65,7 +65,10 @@ storiesOf('renderInput', module)
       </div>
     </div>
   ), { header: false, inline: true, propTables: null })
-  .addWithInfo('Horizontal Form', '', () => (
+  .addWithInfo('Horizontal Form', `
+  ---
+  On smaller devices the form will render as \`stacked\`.
+  `, () => (
     <div className="uk-margin-bottom uk-form-horizontal">
       <Field
         component={renderInput}
