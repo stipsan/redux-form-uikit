@@ -1,3 +1,25 @@
+exports[`renderInput prioritizes error over help 1`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className="uk-form-danger"
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+  <p
+    className="uk-form-help-inline">
+    Errors have precedence.
+  </p>
+</div>
+`;
+
 exports[`renderInput renders correctly 1`] = `
 <div
   className="uk-form-row">
@@ -65,16 +87,16 @@ exports[`renderInput renders error messages correctly 2`] = `
 <div
   className="uk-form-row">
   <input
-    autoComplete="password"
+    autoComplete="email"
     className="uk-form-danger"
     id={undefined}
-    name="password"
+    name="email"
     onBlur={[Function onBlur]}
     onChange={[Function onChange]}
     onDragStart={[Function onDragStart]}
     onDrop={[Function onDrop]}
     onFocus={[Function onFocus]}
-    placeholder={undefined}
+    placeholder="E-mail"
     value="" />
   <p
     className="uk-form-help-inline">
@@ -87,16 +109,16 @@ exports[`renderInput renders error messages correctly 3`] = `
 <div
   className="uk-form-row">
   <input
-    autoComplete="password"
+    autoComplete="email"
     className="uk-form-danger"
     id={undefined}
-    name="password"
+    name="email"
     onBlur={[Function onBlur]}
     onChange={[Function onChange]}
     onDragStart={[Function onDragStart]}
     onDrop={[Function onDrop]}
     onFocus={[Function onFocus]}
-    placeholder={undefined}
+    placeholder="E-mail"
     value="" />
   <p
     className="uk-form-help-inline uk-text-danger">
@@ -106,6 +128,28 @@ exports[`renderInput renders error messages correctly 3`] = `
 `;
 
 exports[`renderInput renders error messages correctly 4`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className="uk-form-danger"
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+  <p
+    className="uk-form-help-block">
+    Support rendering error message in a block beneath the field.
+  </p>
+</div>
+`;
+
+exports[`renderInput renders error messages correctly 5`] = `
 <div
   className="uk-form-row">
   <label
@@ -132,28 +176,6 @@ exports[`renderInput renders error messages correctly 4`] = `
       Neatly renders error in input control group.
     </p>
   </div>
-</div>
-`;
-
-exports[`renderInput renders error messages correctly 5`] = `
-<div
-  className="uk-form-row">
-  <input
-    autoComplete="email"
-    className="uk-form-danger"
-    id={undefined}
-    name="email"
-    onBlur={[Function onBlur]}
-    onChange={[Function onChange]}
-    onDragStart={[Function onDragStart]}
-    onDrop={[Function onDrop]}
-    onFocus={[Function onFocus]}
-    placeholder={undefined}
-    value="" />
-  <p
-    className="uk-form-help-block">
-    Support rendering error message in a block beneath the field.
-  </p>
 </div>
 `;
 
@@ -200,7 +222,7 @@ exports[`renderInput renders help messages correctly 1`] = `
     onDragStart={[Function onDragStart]}
     onDrop={[Function onDrop]}
     onFocus={[Function onFocus]}
-    placeholder={undefined}
+    placeholder="E-mail"
     value="" />
   <p
     className="uk-form-help-inline">
@@ -212,30 +234,71 @@ exports[`renderInput renders help messages correctly 1`] = `
 exports[`renderInput renders help messages correctly 2`] = `
 <div
   className="uk-form-row">
-  <label
-    className="uk-form-label"
-    htmlFor="">
-    E-mail
-  </label>
-  <div
-    className="uk-form-controls">
-    <input
-      autoComplete=""
-      className=""
-      id=""
-      name="email"
-      onBlur={[Function onBlur]}
-      onChange={[Function onChange]}
-      onDragStart={[Function onDragStart]}
-      onDrop={[Function onDrop]}
-      onFocus={[Function onFocus]}
-      placeholder="E-mail"
-      type="email"
-      value="" />
-    <p
-      className="uk-form-help-inline">
-      Friendly message to delight the human.
-    </p>
-  </div>
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+  <p
+    className="uk-form-help-inline uk-text-warning">
+    Supports custom className on help message.
+  </p>
+</div>
+`;
+
+exports[`renderInput renders help messages correctly 3`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+  <p
+    className="uk-form-help-block">
+    Possible to render below field.
+  </p>
+</div>
+`;
+
+exports[`renderInput renders help messages correctly 4`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+  <p
+    className="uk-form-help-inline">
+    <strong>
+      Help attribute can render anything 
+      <code>
+        React
+      </code>
+       can render.
+    </strong>
+  </p>
 </div>
 `;

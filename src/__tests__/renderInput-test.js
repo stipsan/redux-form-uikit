@@ -61,11 +61,7 @@ describe('renderInput', () => {
 
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
-        input={{
-          ...defaultProps.input,
-          name: 'password',
-        }}
+        {...props}
         meta={{
           ...defaultProps.meta,
           touched: true,
@@ -76,12 +72,8 @@ describe('renderInput', () => {
 
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
+        {...props}
         errorClassName="uk-text-danger"
-        input={{
-          ...defaultProps.input,
-          name: 'password',
-        }}
         meta={{
           ...defaultProps.meta,
           touched: true,
@@ -92,11 +84,19 @@ describe('renderInput', () => {
 
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
-        input={{
-          ...defaultProps.input,
-          name: 'email',
+        {...props}
+        errorDisplay="block"
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Support rendering error message in a block beneath the field.',
         }}
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
         label="E-mail"
         meta={{
           ...defaultProps.meta,
@@ -108,28 +108,8 @@ describe('renderInput', () => {
 
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
+        {...props}
         errorDisplay="block"
-        input={{
-          ...defaultProps.input,
-          name: 'email',
-        }}
-        meta={{
-          ...defaultProps.meta,
-          touched: true,
-          error: 'Support rendering error message in a block beneath the field.',
-        }}
-      />
-    ).toJSON()).toMatchSnapshot()
-
-    expect(renderer.create(
-      <RenderInput
-        {...defaultProps}
-        errorDisplay="block"
-        input={{
-          ...defaultProps.input,
-          name: 'email',
-        }}
         label="E-mail"
         meta={{
           ...defaultProps.meta,
@@ -143,22 +123,45 @@ describe('renderInput', () => {
   it('renders help messages correctly', () => {
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
+        {...props}
         help="Friendly message to delight the human."
-        input={{
-          ...defaultProps.input,
-          name: 'email',
-        }}
       />
     ).toJSON()).toMatchSnapshot()
 
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
-        help="Friendly message to delight the human."
-        label="E-mail"
-        name="email"
-        type="email"
+        {...props}
+        help="Supports custom className on help message."
+        helpClassName="uk-text-warning"
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        help="Possible to render below field."
+        helpDisplay="block"
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        help={<strong>Help attribute can render anything <code>React</code> can render.</strong>}
+      />
+    ).toJSON()).toMatchSnapshot()
+  })
+
+  it('prioritizes error over help', () => {
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        help="Don't render this!"
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Errors have precedence.',
+        }}
       />
     ).toJSON()).toMatchSnapshot()
   })
