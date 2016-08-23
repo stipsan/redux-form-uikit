@@ -1,1 +1,1 @@
-export Row from './Row'
+export renderInput from './renderInput'

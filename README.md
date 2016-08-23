@@ -1,7 +1,7 @@
 redux-form-uikit
 ===============
 
-[![Build Status](https://travis-ci.org/stipsan/redux-form-uikit.svg)](https://travis-ci.org/stipsan/redux-form-uikit)
+[![Build Status](https://travis-ci.org/stipsan/redux-form-uikit.svg?branch=master)](https://travis-ci.org/stipsan/redux-form-uikit)
 [![Coverage Status](https://coveralls.io/repos/github/stipsan/redux-form-uikit/badge.svg)](https://coveralls.io/github/stipsan/redux-form-uikit)
 [![npm package](https://img.shields.io/npm/dm/redux-form-uikit.svg)](https://www.npmjs.com/package/redux-form-uikit)
 
@@ -14,6 +14,10 @@ redux-form-uikit
 ```bash
   $ npm install --save redux-form-uikit uikit-react
 ```
+
+## Available Components
+
+* [renderInput](http://form.uikit-react.io/?selectedKind=renderInput&selectedStory=Basic%20Usage&full=0&down=1&left=1&panelRight=0)
 
 This library makes no assumptions on how you provide the UIkit CSS; load it in any way you like.
 
