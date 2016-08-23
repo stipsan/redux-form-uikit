@@ -1,14 +1,15 @@
+import { action } from '@kadira/storybook'
 import { Component } from 'react'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 
 class Form extends Component {
   render() {
-    const { children } = this.props
+    const { children, handleSubmit } = this.props
     return (
-        <form className="uk-form">
-          {children}
-        </form>
+      <form className="uk-form" onSubmit={handleSubmit}>
+        {children}
+      </form>
     )
   }
 }
@@ -20,17 +21,19 @@ const validate = values => {
   } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
     errors.email = 'Invalid email address'
   }
-  if (!values.has('password')) {
+  if (!values.password) {
     errors.password = 'Required'
-  } else if (6 > values.get('password').length) {
+  } else if (6 > values.password.length) {
     errors.password = 'Password too short'
   }
+  action('validate')(values, errors)
   return errors
 }
 
 export default connect()(
   reduxForm({
     form: 'demo',
+    onSubmit: action('onSubmit'),
     validate,
   })(Form)
 )

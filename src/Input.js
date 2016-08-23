@@ -8,19 +8,15 @@ const Input = ({
   meta: { asyncValidating, touched, error, submitting },
   icon,
   label,
-  placeholder,
   ...custom,
 }) => (
   <div className={cx('uk-form-row')}>
     <UKInput
       autoComplete={input.name}
+      placeholder={label}
       {...input}
       {...custom}
-      className={cx('uk-width-1-1 uk-form-large', {
-        'uk-form-danger': touched && error,
-      })}
-      disabled={submitting}
-      placeholder={placeholder || label}
+      danger={touched && error}
     />
     {touched && error && <p className="uk-form-help-block uk-text-left">
       {error}

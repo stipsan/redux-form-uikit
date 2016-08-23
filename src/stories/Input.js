@@ -1,5 +1,6 @@
 import { storiesOf } from '@kadira/storybook'
 import { Field } from 'redux-form'
+import { Button } from 'uikit-react'
 
 import Input from '../Input'
 
@@ -21,6 +22,9 @@ storiesOf('Input', module)
         type="password"
         component={Input}
       />
+      <div className="uk-form-row">
+        <Button type="submit">Submit</Button>
+      </div>
     </div>
   ), { header: false, inline: true, propTables: [Input] })
   /* eslint-disable max-len */
