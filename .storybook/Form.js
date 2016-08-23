@@ -26,6 +26,11 @@ const validate = values => {
   } else if (6 > values.password.length) {
     errors.password = 'Password too short'
   }
+  if (!values['password-repeat']) {
+    errors['password-repeat'] = 'Required'
+  } else if (values.password !== values['password-repeat']) {
+    errors['password-repeat'] = 'Passwords must match'
+  }
   action('validate')(values, errors)
   return errors
 }

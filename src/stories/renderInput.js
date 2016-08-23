@@ -55,7 +55,7 @@ storiesOf('renderInput', module)
       />
       <Field
         component={renderInput}
-        help="block"
+        errorDisplay="block"
         label="Password"
         name="password"
         type="password"
@@ -75,9 +75,44 @@ storiesOf('renderInput', module)
       />
       <Field
         component={renderInput}
-        help="block"
+        errorDisplay="block"
         label="Password"
         name="password"
+        type="password"
+      />
+      <div className="uk-form-row">
+        <div className="uk-form-controls">
+          <Button type="submit">Submit</Button>
+        </div>
+      </div>
+    </div>
+  ), { header: false, inline: true, propTables: null })
+  .addWithInfo('Form Help', '', () => (
+    <div className="uk-margin-bottom uk-form-horizontal">
+      <Field
+        component={renderInput}
+        errorClassName="uk-text-danger"
+        help="This message is replaced by any validation errors."
+        label="E-mail"
+        name="email"
+        type="email"
+      />
+      <Field
+        component={renderInput}
+        errorClassName="uk-text-danger"
+        errorDisplay="block"
+        help="This message stays since errorDisplay=block."
+        label="Password"
+        name="password"
+        type="password"
+      />
+      <Field
+        component={renderInput}
+        errorClassName="uk-text-danger"
+        help={<span>You can have <code>error</code> and <code>help</code> swap places as well.</span>}
+        helpDisplay="block"
+        label="Repeat Password"
+        name="password-repeat"
         type="password"
       />
       <div className="uk-form-row">
@@ -107,8 +142,8 @@ storiesOf('renderInput', module)
             <Field
               inline
               component={renderInput}
-              help="block"
-              helpClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
+              errorClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
+              errorDisplay="block"
               name="email"
               placeholder="E-mail"
               type="email"
@@ -118,8 +153,8 @@ storiesOf('renderInput', module)
             <Field
               inline
               component={renderInput}
-              help="block"
-              helpClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
+              errorClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
+              errorDisplay="block"
               name="password"
               placeholder="Password"
               type="password"

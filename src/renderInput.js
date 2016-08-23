@@ -8,7 +8,11 @@ const renderInput = ({
   meta: { asyncValidating, touched, error, submitting },
   label,
   help,
+  helpDisplay,
   helpClassName,
+  errorDisplay,
+  errorClassName: customErrorClassName,
+  helpClassName: customHelpClassName,
   inline,
   wrapperClassName: customWrapperClassName,
   ...custom,
@@ -22,11 +26,22 @@ const renderInput = ({
     danger: touched && !!error,
   }
   const component = <Input {...props} />
-  const feedback = touched && error && (
-    <p className={cx(`uk-form-help-${help}`, helpClassName)}>
+
+  const errorMessage = touched && error && (
+    <p className={cx(`uk-form-help-${errorDisplay}`, customErrorClassName)}>
       {error}
     </p>
   )
+  const helpMessage = help && (
+    <p className={cx(`uk-form-help-${helpDisplay}`, customHelpClassName)}>
+      {help}
+    </p>
+  )
+  const inlineMessage = (errorDisplay === 'inline' && errorMessage) ||
+                        (helpDisplay === 'inline' && helpMessage)
+  const blockMessage = (errorDisplay === 'block' && errorMessage) ||
+                       (helpDisplay === 'block' && helpMessage)
+
   const wrapperClassName = cx(customWrapperClassName, {
     'uk-form-row': !inline,
     'uk-display-inline-block': inline,
@@ -37,7 +52,8 @@ const renderInput = ({
         <label className="uk-form-label" htmlFor={props.id}>{label}</label>
         <div className="uk-form-controls">
           {component}
-          {feedback}
+          {inlineMessage}
+          {blockMessage}
         </div>
       </div>
     )
@@ -45,20 +61,27 @@ const renderInput = ({
   return (
     <div className={wrapperClassName}>
       {component}
-      {feedback}
+      {inlineMessage}
+      {blockMessage}
     </div>
   )
 }
 
 renderInput.defaultProps = {
-  help: 'inline',
+  helpDisplay: 'inline',
+  errorDisplay: 'inline',
 }
 
 renderInput.propTypes = {
-  // ...FieldPropTypes,
-  inline: PropTypes.bool,
-  help: PropTypes.oneOf(['inline', 'block']),
+  errorClassName: PropTypes.string,
+  errorDisplay: PropTypes.oneOf(['inline', 'block']),
+  help: PropTypes.node,
   helpClassName: PropTypes.string,
+  helpDisplay: PropTypes.oneOf(['inline', 'block']),
+  id: PropTypes.string,
+  inline: PropTypes.bool,
+  input: PropTypes.object, // @TODO remove
+  meta: PropTypes.object, // @TODO remove
   wrapperClassName: PropTypes.string,
 }
 
