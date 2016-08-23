@@ -250,4 +250,44 @@ describe('renderInput', () => {
       />
     ).toJSON()).toMatchSnapshot()
   })
+
+  it('renders asyncValidating status correctly', () => {
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        meta={{
+          ...defaultProps.meta,
+          asyncValidating: true,
+          touched: true,
+          pristine: false,
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        flip
+        icon="envelope"
+        meta={{
+          ...defaultProps.meta,
+          asyncValidating: true,
+          touched: true,
+          pristine: false,
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        meta={{
+          ...defaultProps.meta,
+          asyncValidating: false,
+          touched: true,
+          pristine: false,
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
+  })
 })

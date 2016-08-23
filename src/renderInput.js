@@ -1,11 +1,10 @@
 import cx from 'classnames'
 import { PropTypes } from 'react'
 import { Input } from 'uikit-react'
-// import FieldPropTypes from 'redux-form-uikit/PropTypes/Field'
 
 const renderInput = ({
   input,
-  meta: { touched, error },
+  meta: { touched, error, asyncValidating },
   label,
   help,
   helpDisplay,
@@ -20,6 +19,8 @@ const renderInput = ({
     <Input
       autoComplete={input.name}
       id={label ? input.name : undefined}
+      icon={asyncValidating === true && 'spinner'}
+      success={asyncValidating === false}
       placeholder={label}
       {...input}
       {...custom}

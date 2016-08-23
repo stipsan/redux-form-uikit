@@ -168,6 +168,66 @@ exports[`renderInput prioritizes error over help 4`] = `
 </div>
 `;
 
+exports[`renderInput renders asyncValidating status correctly 1`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+</div>
+`;
+
+exports[`renderInput renders asyncValidating status correctly 2`] = `
+<div
+  className="uk-form-row">
+  <div
+    className="uk-form-icon">
+    <i
+      className="uk-icon-envelope" />
+    <input
+      autoComplete="email"
+      className=""
+      flip={true}
+      id={undefined}
+      name="email"
+      onBlur={[Function onBlur]}
+      onChange={[Function onChange]}
+      onDragStart={[Function onDragStart]}
+      onDrop={[Function onDrop]}
+      onFocus={[Function onFocus]}
+      placeholder="E-mail"
+      value="" />
+  </div>
+</div>
+`;
+
+exports[`renderInput renders asyncValidating status correctly 3`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+</div>
+`;
+
 exports[`renderInput renders correctly 1`] = `
 <div
   className="uk-form-row">
