@@ -49,14 +49,15 @@ storiesOf('renderInput', module)
     <div className="uk-margin-bottom uk-form-stacked">
       <Field
         component={renderInput}
-        name="email"
         label="E-mail"
+        name="email"
         type="email"
       />
       <Field
         component={renderInput}
-        name="password"
+        help="block"
         label="Password"
+        name="password"
         type="password"
       />
       <div className="uk-form-row">
@@ -64,24 +65,71 @@ storiesOf('renderInput', module)
       </div>
     </div>
   ), { header: false, inline: true, propTables: null })
-  .addWithInfo('Horizontal Form', `
-  If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
-  `, () => (
-    <div className="uk-margin-bottom">
+  .addWithInfo('Horizontal Form', '', () => (
+    <div className="uk-margin-bottom uk-form-horizontal">
       <Field
         component={renderInput}
+        label="E-mail"
         name="email"
+        type="email"
       />
+      <Field
+        component={renderInput}
+        help="block"
+        label="Password"
+        name="password"
+        type="password"
+      />
+      <div className="uk-form-row">
+        <div className="uk-form-controls">
+          <Button type="submit">Submit</Button>
+        </div>
+      </div>
     </div>
   ), { header: false, inline: true, propTables: null })
-  .addWithInfo('Inline Form', `
-  If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
-  `, () => (
+  .addWithInfo('Inline Form', '', () => (
     <div className="uk-margin-bottom">
-      <Field
-        component={renderInput}
-        name="email"
-      />
+      <nav className="uk-navbar">
+        <a className="uk-navbar-brand">Brand</a>
+        <div className="uk-navbar-content">
+          <Field
+            flip
+            inline
+            component={renderInput}
+            icon="search"
+            name="search"
+            type="search"
+            width="small"
+          />
+        </div>
+        <div className="uk-navbar-flip">
+          <div className="uk-navbar-content">
+            <Field
+              inline
+              component={renderInput}
+              help="block"
+              helpClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
+              name="email"
+              placeholder="E-mail"
+              type="email"
+              width="small"
+              wrapperClassName="uk-margin-small-left"
+            />
+            <Field
+              inline
+              component={renderInput}
+              help="block"
+              helpClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
+              name="password"
+              placeholder="Password"
+              type="password"
+              width="small"
+              wrapperClassName="uk-margin-small-left uk-margin-small-right"
+            />
+            <Button primary type="submit">Login <i className="uk-icon-chevron-circle-right" /></Button>
+          </div>
+        </div>
+      </nav>
     </div>
   ), { header: false, inline: true, propTables: null })
   .addWithInfo('Async Validation', `

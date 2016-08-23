@@ -6,8 +6,11 @@ import { Input } from 'uikit-react'
 const renderInput = ({
   input,
   meta: { asyncValidating, touched, error, submitting },
-  icon,
   label,
+  help,
+  helpClassName,
+  inline,
+  wrapperClassName: customWrapperClassName,
   ...custom,
 }) => {
   const props = {
@@ -19,34 +22,44 @@ const renderInput = ({
     danger: touched && !!error,
   }
   const component = <Input {...props} />
-  const help = touched && error && (
-    <p className="uk-form-help-inline">
+  const feedback = touched && error && (
+    <p className={cx(`uk-form-help-${help}`, helpClassName)}>
       {error}
     </p>
   )
+  const wrapperClassName = cx(customWrapperClassName, {
+    'uk-form-row': !inline,
+    'uk-display-inline-block': inline,
+  })
   if (label) {
     return (
-      <div className="uk-form-row">
+      <div className={wrapperClassName}>
         <label className="uk-form-label" htmlFor={props.id}>{label}</label>
         <div className="uk-form-controls">
           {component}
-          {help}
+          {feedback}
         </div>
       </div>
     )
   }
   return (
-    <div className="uk-form-row">
+    <div className={wrapperClassName}>
       {component}
-      {help}
+      {feedback}
     </div>
   )
 }
 
+renderInput.defaultProps = {
+  help: 'inline',
+}
 
 renderInput.propTypes = {
   // ...FieldPropTypes,
-  icon: PropTypes.string,
+  inline: PropTypes.bool,
+  help: PropTypes.oneOf(['inline', 'block']),
+  helpClassName: PropTypes.string,
+  wrapperClassName: PropTypes.string,
 }
 
 export default renderInput
