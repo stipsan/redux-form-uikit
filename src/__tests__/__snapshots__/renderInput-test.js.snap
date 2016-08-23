@@ -1,0 +1,41 @@
+exports[`renderInput renders correctly 1`] = `
+<div
+  className="uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder={undefined}
+    value="" />
+</div>
+`;
+
+exports[`renderInput renders correctly 2`] = `
+<div
+  className="uk-form-row">
+  <label
+    className="uk-form-label"
+    htmlFor="email">
+    E-mail
+  </label>
+  <div
+    className="uk-form-controls">
+    <input
+      autoComplete="email"
+      className=""
+      name="email"
+      onBlur={[Function onBlur]}
+      onChange={[Function onChange]}
+      onDragStart={[Function onDragStart]}
+      onDrop={[Function onDrop]}
+      onFocus={[Function onFocus]}
+      placeholder="E-mail"
+      value="" />
+  </div>
+</div>
+`;
