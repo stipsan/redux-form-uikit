@@ -9,9 +9,18 @@ Input.displayName = 'Input'
 storiesOf('Input', module)
   .addWithInfo('Basic Usage', '', () => (
     <div className="uk-margin-bottom">
-      <Field name="username" label="Username" component={Input} />
-      <Field name="email" label="E-mail" component={Input} />
-      <Field name="age" label="Age" component={Input} />
+      <Field
+        name="email"
+        label="E-mail"
+        type="email"
+        component={Input}
+      />
+      <Field
+        name="password"
+        label="Password"
+        type="password"
+        component={Input}
+      />
     </div>
   ), { header: false, inline: true, propTables: [Input] })
   /* eslint-disable max-len */
