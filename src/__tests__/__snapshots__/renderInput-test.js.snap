@@ -384,3 +384,21 @@ exports[`renderInput renders help messages correctly 4`] = `
   </p>
 </div>
 `;
+
+exports[`renderInput supports custom wrapper className 1`] = `
+<div
+  className="uk-display-inline-block uk-form-row">
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder="E-mail"
+    value="" />
+</div>
+`;

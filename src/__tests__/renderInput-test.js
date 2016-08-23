@@ -216,4 +216,16 @@ describe('renderInput', () => {
       />
     ).toJSON()).toMatchSnapshot()
   })
+
+  it('allows overriding defaults', () => {
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        autoComplete={false}
+        id="email-confirm"
+        label="E-mail"
+        placeholder="Confirm E-mail"
+      />
+    ).toJSON()).toMatchSnapshot()
+  })
 })
