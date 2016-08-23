@@ -1,23 +1,23 @@
 import { storiesOf } from '@kadira/storybook'
 
-import Row from '../Row'
+import Input from '../Input'
 
 // This is to work around: https://github.com/kadirahq/react-storybook-addon-info/issues/26#issuecomment-229029177
-Row.displayName = 'Row'
+Input.displayName = 'Input'
 
-storiesOf('Row', module)
+storiesOf('Input', module)
   .addWithInfo('Basic Usage', '', () => (
     <div className="uk-margin-bottom">
-      <Row />
+      <Input />
     </div>
-  ), { header: false, inline: true, propTables: [Row] })
+  ), { header: false, inline: true, propTables: [Input] })
   /* eslint-disable max-len */
   .addWithInfo('Advanced', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.
   `, () => (
     <div className="uk-margin-bottom">
 
-      <Row />
+      <Input />
     </div>
   ), { header: false, inline: true })
   /* eslint-enable */

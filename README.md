@@ -15,6 +15,10 @@ redux-form-uikit
   $ npm install --save redux-form-uikit uikit-react
 ```
 
+## Available Components
+
+* [Input](http://form.uikit-react.io/?selectedKind=Input&selectedStory=Basic%20Usage&full=0&down=1&left=1&panelRight=0)
+
 This library makes no assumptions on how you provide the UIkit CSS; load it in any way you like.
 
 Check our [Storybook](http://form.uikit-react.io) to see docs and usage examples for each component in the library.

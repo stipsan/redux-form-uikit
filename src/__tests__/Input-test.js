@@ -1,11 +1,11 @@
 import renderer from 'react-test-renderer'
 
-import Row from '../Row'
+import Input from '../Input'
 
-describe('Row', () => {
+describe('Input', () => {
   it('renders correctly', () => {
     expect(renderer.create(
-      <Row />
+      <Input />
     ).toJSON()).toMatchSnapshot()
   })
 })
