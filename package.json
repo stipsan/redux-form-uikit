@@ -94,7 +94,8 @@
     "url-loader": "0.5.7"
   },
   "peerDependencies": {
-    "uikit-react": "*"
+    "uikit-react": "*",
+    "redux-form": ">=6.0.0-rc.5"
   },
   "dependencies": {
     "classnames": "2.2.5"

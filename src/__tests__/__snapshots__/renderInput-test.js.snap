@@ -174,7 +174,7 @@ exports[`renderInput renders asyncValidating status correctly 1`] = `
   <div
     className="uk-form-icon">
     <i
-      className="uk-icon-spinner" />
+      className="uk-icon-spinner uk-icon-spin" />
     <input
       autoComplete="email"
       className=""
@@ -195,13 +195,12 @@ exports[`renderInput renders asyncValidating status correctly 2`] = `
 <div
   className="uk-form-row">
   <div
-    className="uk-form-icon">
+    className="uk-form-icon uk-form-icon-flip">
     <i
-      className="uk-icon-spinner" />
+      className="uk-icon-spinner uk-icon-spin" />
     <input
       autoComplete="email"
       className=""
-      flip={true}
       id={undefined}
       name="email"
       onBlur={[Function onBlur]}
