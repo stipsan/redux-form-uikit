@@ -2,12 +2,14 @@ import { storiesOf } from '@kadira/storybook'
 import { Field } from 'redux-form'
 import { Button, Input } from 'uikit-react'
 
-import renderInput from '../renderInput'
+// import renderInput from '../renderInput'
 
 // This is to work around: https://github.com/kadirahq/react-storybook-addon-info/issues/26#issuecomment-229029177
+global.renderInput = require('../renderInput').default
 renderInput.displayName = 'renderInput'
 Field.displayName = 'Field'
 Button.displayName = 'Button'
+
 
 // Make sure only user-land propTypes are shown (and not props relevant to redux-form internals)
 /* eslint-disable no-unused-vars */
