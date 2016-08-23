@@ -1,17 +1,16 @@
 import { action } from '@kadira/storybook'
-import { Component } from 'react'
+import { PropTypes } from 'react'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 
-class Form extends Component {
-  render() {
-    const { children, handleSubmit } = this.props
-    return (
-      <form className="uk-form" onSubmit={handleSubmit}>
-        {children}
-      </form>
-    )
-  }
+const Form = ({ children, handleSubmit }) => (
+  <form className="uk-form" onSubmit={handleSubmit}>
+    {children}
+  </form>
+)
+Form.propTypes = {
+  children: PropTypes.node.isRequired,
+  handleSubmit: PropTypes.func.isRequired,
 }
 
 const validate = values => {
@@ -23,7 +22,7 @@ const validate = values => {
   }
   if (!values.password) {
     errors.password = 'Required'
-  } else if (6 > values.password.length) {
+  } else if (values.password.length < 6) {
     errors.password = 'Password too short'
   }
   if (!values['password-repeat']) {

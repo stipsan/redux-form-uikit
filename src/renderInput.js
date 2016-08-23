@@ -5,14 +5,13 @@ import { Input } from 'uikit-react'
 
 const renderInput = ({
   input,
-  meta: { asyncValidating, touched, error, submitting },
+  meta: { touched, error },
   label,
   help,
   helpDisplay,
-  helpClassName,
   errorDisplay,
-  errorClassName: customErrorClassName,
-  helpClassName: customHelpClassName,
+  errorClassName,
+  helpClassName,
   inline,
   wrapperClassName: customWrapperClassName,
   ...custom,
@@ -28,12 +27,12 @@ const renderInput = ({
   const component = <Input {...props} />
 
   const errorMessage = touched && error && (
-    <p className={cx(`uk-form-help-${errorDisplay}`, customErrorClassName)}>
+    <p className={cx(`uk-form-help-${errorDisplay}`, errorClassName)}>
       {error}
     </p>
   )
   const helpMessage = help && (
-    <p className={cx(`uk-form-help-${helpDisplay}`, customHelpClassName)}>
+    <p className={cx(`uk-form-help-${helpDisplay}`, helpClassName)}>
       {help}
     </p>
   )
@@ -80,8 +79,9 @@ renderInput.propTypes = {
   helpDisplay: PropTypes.oneOf(['inline', 'block']),
   id: PropTypes.string,
   inline: PropTypes.bool,
-  input: PropTypes.object, // @TODO remove
-  meta: PropTypes.object, // @TODO remove
+  input: PropTypes.object, // @TODO replace with actual proptypes
+  label: PropTypes.node,
+  meta: PropTypes.object, // @TODO replace with actual proptypes
   wrapperClassName: PropTypes.string,
 }
 
