@@ -15,26 +15,19 @@ const renderInput = ({
     placeholder: label,
     id: label ? input.name : undefined,
     ...input,
+    ...custom,
+    danger: touched && !!error,
   }
-  const component = (
-    <Input
-      autoComplete={input.name}
-      placeholder={label}
-      {...input}
-      {...custom}
-      danger={touched && error}
-    />
-  )
+  const component = <Input {...props} />
   const help = touched && error && (
-    <p className="uk-form-help-block uk-text-left">
+    <p className="uk-form-help-inline">
       {error}
     </p>
   )
   if (label) {
-    const id = input.id || input.name
     return (
       <div className="uk-form-row">
-        <label className="uk-form-label" htmlFor={id}>{label}</label>
+        <label className="uk-form-label" htmlFor={props.id}>{label}</label>
         <div className="uk-form-controls">
           {component}
           {help}

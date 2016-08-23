@@ -4,6 +4,7 @@ exports[`renderInput renders correctly 1`] = `
   <input
     autoComplete="email"
     className=""
+    id={undefined}
     name="email"
     onBlur={[Function onBlur]}
     onChange={[Function onChange]}
@@ -28,6 +29,7 @@ exports[`renderInput renders correctly 2`] = `
     <input
       autoComplete="email"
       className=""
+      id="email"
       name="email"
       onBlur={[Function onBlur]}
       onChange={[Function onChange]}
