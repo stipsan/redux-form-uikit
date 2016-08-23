@@ -1,6 +1,6 @@
 {
   "name": "redux-form-uikit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A set of wrapper components to facilitate using UIkit React with Redux Form",
   "main": "./lib",
   "scripts": {
@@ -90,11 +90,12 @@
     "redux-form": "6.0.0-rc.5",
     "style-loader": "0.13.1",
     "uikit": "2.26.4",
-    "uikit-react": "0.6.0",
+    "uikit-react": "0.6.1",
     "url-loader": "0.5.7"
   },
   "peerDependencies": {
-    "uikit-react": "*"
+    "uikit-react": "*",
+    "redux-form": ">=6.0.0-rc.5"
   },
   "dependencies": {
     "classnames": "2.2.5"
