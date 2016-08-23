@@ -207,4 +207,13 @@ describe('renderInput', () => {
       />
     ).toJSON()).toMatchSnapshot()
   })
+
+  it('supports custom wrapper className', () => {
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        wrapperClassName="uk-display-inline-block"
+      />
+    ).toJSON()).toMatchSnapshot()
+  })
 })
