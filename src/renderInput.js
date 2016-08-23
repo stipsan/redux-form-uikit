@@ -49,7 +49,7 @@ const renderInput = ({
   if (label) {
     return (
       <div className={wrapperClassName}>
-        <label className="uk-form-label" htmlFor={input.id || input.name}>{label}</label>
+        <label className="uk-form-label" htmlFor={custom.id || input.name}>{label}</label>
         <div className="uk-form-controls">
           {component}
           {inlineMessage}

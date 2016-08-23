@@ -1,3 +1,29 @@
+exports[`renderInput allows overriding defaults 1`] = `
+<div
+  className="uk-form-row">
+  <label
+    className="uk-form-label"
+    htmlFor="email-confirm">
+    E-mail
+  </label>
+  <div
+    className="uk-form-controls">
+    <input
+      autoComplete={false}
+      className=""
+      id="email-confirm"
+      name="email"
+      onBlur={[Function onBlur]}
+      onChange={[Function onChange]}
+      onDragStart={[Function onDragStart]}
+      onDrop={[Function onDrop]}
+      onFocus={[Function onFocus]}
+      placeholder="Confirm E-mail"
+      value="" />
+  </div>
+</div>
+`;
+
 exports[`renderInput prioritizes error over help 1`] = `
 <div
   className="uk-form-row">
