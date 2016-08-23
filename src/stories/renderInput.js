@@ -3,19 +3,19 @@ import { PropTypes } from 'react'
 import { Field } from 'redux-form'
 import { Button } from 'uikit-react'
 
-import Input from '../Input'
+import renderInput from '../renderInput'
 
 // This is to work around: https://github.com/kadirahq/react-storybook-addon-info/issues/26#issuecomment-229029177
-Input.displayName = 'Input'
+renderInput.displayName = 'renderInput'
 
 // Make sure only user-land propTypes are shown (and not props relevant to redux-form internals)
 const InputProps = () => <input />
 InputProps.propTypes = {
   icon: PropTypes.string,
 }
-InputProps.displayName = 'Inputs'
+InputProps.displayName = 'renderInput'
 
-storiesOf('Input', module)
+storiesOf('renderInput', module)
   /* eslint-disable max-len */
   .addWithInfo('Basic Usage', `
   ---
@@ -28,13 +28,13 @@ storiesOf('Input', module)
         name="email"
         placeholder="E-mail"
         type="email"
-        component={Input}
+        component={renderInput}
       />
       <Field
         name="password"
         placeholder="Password"
         type="password"
-        component={Input}
+        component={renderInput}
       />
       <div className="uk-form-row">
         <Button type="submit">Submit</Button>
@@ -46,7 +46,7 @@ storiesOf('Input', module)
   `, () => (
     <div className="uk-margin-bottom">
 
-      <Field name="email" component={Input} />
+      <Field name="email" component={renderInput} />
     </div>
   ), { header: false, inline: true, propTables: null })
   /* eslint-enable */

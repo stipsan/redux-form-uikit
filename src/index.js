@@ -1,1 +1,1 @@
-export Input from './Input'
+export renderInput from './renderInput'

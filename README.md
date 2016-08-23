@@ -17,7 +17,7 @@ redux-form-uikit
 
 ## Available Components
 
-* [Input](http://form.uikit-react.io/?selectedKind=Input&selectedStory=Basic%20Usage&full=0&down=1&left=1&panelRight=0)
+* [renderInput](http://form.uikit-react.io/?selectedKind=renderInput&selectedStory=Basic%20Usage&full=0&down=1&left=1&panelRight=0)
 
 This library makes no assumptions on how you provide the UIkit CSS; load it in any way you like.
 

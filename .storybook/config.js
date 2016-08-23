@@ -10,7 +10,7 @@ setAddon(infoAddon)
 addDecorator(Root)
 
 function loadStories() {
-  require('../src/stories/Input')
+  require('../src/stories/renderInput')
 }
 
 configure(loadStories, module)
