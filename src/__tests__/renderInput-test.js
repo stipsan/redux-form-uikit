@@ -164,5 +164,47 @@ describe('renderInput', () => {
         }}
       />
     ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        errorDisplay="block"
+        help="Don't render this!"
+        helpDisplay="block"
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Errors have precedence.',
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        help="Don't render this!"
+        label="E-mail"
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Errors have precedence.',
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...props}
+        errorDisplay="block"
+        help="Don't render this!"
+        helpDisplay="block"
+        label="E-mail"
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Errors have precedence.',
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
   })
 })
