@@ -2,16 +2,16 @@ exports[`renderInput renders correctly 1`] = `
 <div
   className="uk-form-row">
   <input
-    autoComplete=""
+    autoComplete="email"
     className=""
     id={undefined}
-    name=""
+    name="email"
     onBlur={[Function onBlur]}
     onChange={[Function onChange]}
     onDragStart={[Function onDragStart]}
     onDrop={[Function onDrop]}
     onFocus={[Function onFocus]}
-    placeholder={undefined}
+    placeholder="E-mail"
     value="" />
 </div>
 `;
@@ -47,16 +47,16 @@ exports[`renderInput renders error messages correctly 1`] = `
 <div
   className="uk-form-row">
   <input
-    autoComplete="password"
+    autoComplete="email"
     className=""
     id={undefined}
-    name="password"
+    name="email"
     onBlur={[Function onBlur]}
     onChange={[Function onChange]}
     onDragStart={[Function onDragStart]}
     onDrop={[Function onDrop]}
     onFocus={[Function onFocus]}
-    placeholder={undefined}
+    placeholder="E-mail"
     value="" />
 </div>
 `;
@@ -190,31 +190,22 @@ exports[`renderInput renders error messages correctly 6`] = `
 exports[`renderInput renders help messages correctly 1`] = `
 <div
   className="uk-form-row">
-  <label
-    className="uk-form-label"
-    htmlFor="">
-    E-mail
-  </label>
-  <div
-    className="uk-form-controls">
-    <input
-      autoComplete=""
-      className=""
-      id=""
-      name="email"
-      onBlur={[Function onBlur]}
-      onChange={[Function onChange]}
-      onDragStart={[Function onDragStart]}
-      onDrop={[Function onDrop]}
-      onFocus={[Function onFocus]}
-      placeholder="E-mail"
-      type="email"
-      value="" />
-    <p
-      className="uk-form-help-inline">
-      Friendly message to delight the human.
-    </p>
-  </div>
+  <input
+    autoComplete="email"
+    className=""
+    id={undefined}
+    name="email"
+    onBlur={[Function onBlur]}
+    onChange={[Function onChange]}
+    onDragStart={[Function onDragStart]}
+    onDrop={[Function onDrop]}
+    onFocus={[Function onFocus]}
+    placeholder={undefined}
+    value="" />
+  <p
+    className="uk-form-help-inline">
+    Friendly message to delight the human.
+  </p>
 </div>
 `;
 

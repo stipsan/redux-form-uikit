@@ -26,18 +26,22 @@ describe('renderInput', () => {
       valid: false,
     },
   }
+  const props = {
+    ...defaultProps,
+    input: {
+      ...defaultProps.input,
+      name: 'email',
+    },
+    placeholder: 'E-mail',
+  }
   it('renders correctly', () => {
     expect(renderer.create(
-      <RenderInput {...defaultProps} />
+      <RenderInput {...props} />
     ).toJSON()).toMatchSnapshot()
 
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
-        input={{
-          ...defaultProps.input,
-          name: 'email',
-        }}
+        {...props}
         label="E-mail"
         type="email"
       />
@@ -47,11 +51,7 @@ describe('renderInput', () => {
   it('renders error messages correctly', () => {
     expect(renderer.create(
       <RenderInput
-        {...defaultProps}
-        input={{
-          ...defaultProps.input,
-          name: 'password',
-        }}
+        {...props}
         meta={{
           ...defaultProps.meta,
           error: 'Shows no error if untouched.',
@@ -145,9 +145,10 @@ describe('renderInput', () => {
       <RenderInput
         {...defaultProps}
         help="Friendly message to delight the human."
-        label="E-mail"
-        name="email"
-        type="email"
+        input={{
+          ...defaultProps.input,
+          name: 'email',
+        }}
       />
     ).toJSON()).toMatchSnapshot()
 
