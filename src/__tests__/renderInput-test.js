@@ -34,8 +34,11 @@ describe('renderInput', () => {
     expect(renderer.create(
       <RenderInput
         {...defaultProps}
+        input={{
+          ...defaultProps.input,
+          name: 'email',
+        }}
         label="E-mail"
-        name="email"
         type="email"
       />
     ).toJSON()).toMatchSnapshot()
@@ -45,23 +48,29 @@ describe('renderInput', () => {
     expect(renderer.create(
       <RenderInput
         {...defaultProps}
+        input={{
+          ...defaultProps.input,
+          name: 'password',
+        }}
         meta={{
           ...defaultProps.meta,
           error: 'Shows no error if untouched.',
         }}
-        name="password"
       />
     ).toJSON()).toMatchSnapshot()
 
     expect(renderer.create(
       <RenderInput
         {...defaultProps}
+        input={{
+          ...defaultProps.input,
+          name: 'password',
+        }}
         meta={{
           ...defaultProps.meta,
           touched: true,
           error: 'Shows error if touched.',
         }}
-        name="password"
       />
     ).toJSON()).toMatchSnapshot()
 
@@ -69,38 +78,64 @@ describe('renderInput', () => {
       <RenderInput
         {...defaultProps}
         errorClassName="uk-text-danger"
+        input={{
+          ...defaultProps.input,
+          name: 'password',
+        }}
         meta={{
           ...defaultProps.meta,
           touched: true,
           error: 'Allows custom className on error container.',
         }}
-        name="password"
       />
     ).toJSON()).toMatchSnapshot()
 
     expect(renderer.create(
       <RenderInput
         {...defaultProps}
+        input={{
+          ...defaultProps.input,
+          name: 'email',
+        }}
         label="E-mail"
         meta={{
           ...defaultProps.meta,
           touched: true,
           error: 'Neatly renders error in input control group.',
         }}
-        name="email"
       />
     ).toJSON()).toMatchSnapshot()
 
     expect(renderer.create(
       <RenderInput
         {...defaultProps}
+        errorDisplay="block"
+        input={{
+          ...defaultProps.input,
+          name: 'email',
+        }}
+        meta={{
+          ...defaultProps.meta,
+          touched: true,
+          error: 'Support rendering error message in a block beneath the field.',
+        }}
+      />
+    ).toJSON()).toMatchSnapshot()
+
+    expect(renderer.create(
+      <RenderInput
+        {...defaultProps}
+        errorDisplay="block"
+        input={{
+          ...defaultProps.input,
+          name: 'email',
+        }}
         label="E-mail"
         meta={{
           ...defaultProps.meta,
           touched: true,
-          error: 'Gently nudge the human in the right direction.',
+          error: 'Support rendering error message in a block beneath the field.',
         }}
-        name="email"
       />
     ).toJSON()).toMatchSnapshot()
   })

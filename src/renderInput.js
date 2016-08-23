@@ -16,19 +16,11 @@ const renderInput = ({
   wrapperClassName: customWrapperClassName,
   ...custom,
 }) => {
-  const props = {
-    autoComplete: input.name,
-    placeholder: label,
-    id: label ? input.name : undefined,
-    ...input,
-    ...custom,
-    danger: touched && !!error,
-  }
   const component = (
     <Input
       autoComplete={input.name}
-      placeholder={label}
       id={label ? input.name : undefined}
+      placeholder={label}
       {...input}
       {...custom}
       danger={touched && !!error}
@@ -57,7 +49,7 @@ const renderInput = ({
   if (label) {
     return (
       <div className={wrapperClassName}>
-        <label className="uk-form-label" htmlFor={props.id}>{label}</label>
+        <label className="uk-form-label" htmlFor={input.id || input.name}>{label}</label>
         <div className="uk-form-controls">
           {component}
           {inlineMessage}
