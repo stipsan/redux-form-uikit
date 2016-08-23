@@ -1,4 +1,5 @@
 import { storiesOf } from '@kadira/storybook'
+import { Field } from 'redux-form'
 
 import Input from '../Input'
 
@@ -8,7 +9,9 @@ Input.displayName = 'Input'
 storiesOf('Input', module)
   .addWithInfo('Basic Usage', '', () => (
     <div className="uk-margin-bottom">
-      <Input />
+      <Field name="username" label="Username" component={Input} />
+      <Field name="email" label="E-mail" component={Input} />
+      <Field name="age" label="Age" component={Input} />
     </div>
   ), { header: false, inline: true, propTables: [Input] })
   /* eslint-disable max-len */
@@ -17,7 +20,7 @@ storiesOf('Input', module)
   `, () => (
     <div className="uk-margin-bottom">
 
-      <Input />
+      <Field name="email" component={Input} />
     </div>
   ), { header: false, inline: true })
   /* eslint-enable */
