@@ -1,6 +1,6 @@
 {
   "name": "redux-form-uikit",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "description": "A set of wrapper components to facilitate using UIkit React with Redux Form",
   "main": "./lib",
   "scripts": {
@@ -23,7 +23,10 @@
   "keywords": [
     "react",
     "react-component",
+    "redux",
+    "redux-form",
     "uikit",
+    "uikit-react",
     "ecosystem-react"
   ],
   "author": "Stian Didriksen <stipsan@gmail.com> (http://github.com/stipsan)",
@@ -48,7 +51,7 @@
   "homepage": "https://github.com/stipsan/redux-form-uikit",
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.2.1",
-    "@kadira/storybook": "2.3.0",
+    "@kadira/storybook": "2.5.1",
     "@kadira/storybook-deployer": "1.1.0",
     "autoprefixer": "6.4.0",
     "babel-cli": "6.11.4",
@@ -64,7 +67,7 @@
     "babel-preset-stage-0": "6.5.0",
     "babel-register": "6.11.6",
     "coveralls": "2.11.12",
-    "css-loader": "0.23.1",
+    "css-loader": "0.24.0",
     "eslint": "3.3.1",
     "eslint-config-airbnb": "10.0.1",
     "eslint-plugin-import": "1.14.0",
@@ -90,7 +93,7 @@
     "redux-form": "6.0.0-rc.5",
     "style-loader": "0.13.1",
     "uikit": "2.26.4",
-    "uikit-react": "0.6.1",
+    "uikit-react": "0.6.2",
     "url-loader": "0.5.7"
   },
   "peerDependencies": {

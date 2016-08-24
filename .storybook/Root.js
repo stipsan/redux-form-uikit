@@ -35,15 +35,6 @@ const Root = (fn, { kind, story }) => (
           <ul className="uk-navbar-nav">
             <li>
               <a
-                href="https://uikit-react.io"
-                rel="noopener noreferrer"
-                target="_blank"
-              >
-                uikit-react
-              </a>
-            </li>
-            <li>
-              <a
                 href="https://github.com/stipsan/redux-form-uikit"
                 rel="noopener noreferrer"
                 target="_blank"
