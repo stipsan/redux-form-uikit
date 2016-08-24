@@ -47,7 +47,9 @@ storiesOf('renderInput', module)
         <Button type="submit">Submit</Button>
       </div>
     </div>
-  ), { header: false, inline: true, propTables: [InputProps] })
+  ), { header: false, inline: true, propTables: [InputProps], mtrcConf: { // eslint-disable-line
+    a: ({ href, children }) => <a href={href} target="_blank">{children}</a>, // eslint-disable-line
+  } })
   .addWithInfo('Stacked Form', '', () => (
     <div className="uk-margin-bottom uk-form-stacked">
       <Field
