@@ -1,6 +1,6 @@
 {
   "name": "redux-form-uikit",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A set of wrapper components to facilitate using UIkit React with Redux Form",
   "main": "./lib",
   "scripts": {
@@ -23,7 +23,10 @@
   "keywords": [
     "react",
     "react-component",
+    "redux",
+    "redux-form",
     "uikit",
+    "uikit-react",
     "ecosystem-react"
   ],
   "author": "Stian Didriksen <stipsan@gmail.com> (http://github.com/stipsan)",
