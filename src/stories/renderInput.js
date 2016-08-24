@@ -2,10 +2,9 @@ import { storiesOf } from '@kadira/storybook'
 import { Field } from 'redux-form'
 import { Button, Input } from 'uikit-react'
 
-// import renderInput from '../renderInput'
+import renderInput from '../renderInput'
 
 // This is to work around: https://github.com/kadirahq/react-storybook-addon-info/issues/26#issuecomment-229029177
-window.renderInput = require('../renderInput').default
 renderInput.displayName = 'renderInput'
 Field.displayName = 'Field'
 Button.displayName = 'Button'
