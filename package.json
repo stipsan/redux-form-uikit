@@ -23,7 +23,10 @@
   "keywords": [
     "react",
     "react-component",
+    "redux",
+    "redux-form",
     "uikit",
+    "uikit-react",
     "ecosystem-react"
   ],
   "author": "Stian Didriksen <stipsan@gmail.com> (http://github.com/stipsan)",
