@@ -1,6 +1,6 @@
 {
   "name": "redux-form-uikit",
-  "version": "0.2.11",
+  "version": "0.2.12",
   "description": "A set of wrapper components to facilitate using UIkit React with Redux Form",
   "main": "./lib",
   "scripts": {
