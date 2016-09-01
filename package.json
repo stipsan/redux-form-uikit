@@ -92,7 +92,7 @@
     "redux": "3.5.2",
     "redux-form": "6.0.1",
     "style-loader": "0.13.1",
-    "uikit": "2.27.0",
+    "uikit": "2.27.1",
     "uikit-react": "0.6.11",
     "url-loader": "0.5.7"
   },
