@@ -5,7 +5,8 @@ redux-form-uikit
 [![Coverage Status](https://coveralls.io/repos/github/stipsan/redux-form-uikit/badge.svg)](https://coveralls.io/github/stipsan/redux-form-uikit)
 [![npm package](https://img.shields.io/npm/dm/redux-form-uikit.svg)](https://www.npmjs.com/package/redux-form-uikit)
 
-[![NPM](https://nodei.co/npm/redux-form-uikit.png)](https://www.npmjs.com/package/redux-form-uikit)
+[![NPM](https://nodei.co/npm/redux-form-uikit.png?downloadRank=true)](https://www.npmjs.com/package/redux-form-uikit)
+[![NPM](https://nodei.co/npm-dl/redux-form-uikit.png?months=3&height=2)](https://nodei.co/npm/redux-form-uikit/)
 
 <img src="https://uikit-react.io/logo.svg" width="256"/>
 
