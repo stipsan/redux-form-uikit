@@ -90,7 +90,7 @@
     "react-redux": "4.4.5",
     "react-test-renderer": "15.3.1",
     "redux": "3.6.0",
-    "redux-form": "6.0.4",
+    "redux-form": "6.0.5",
     "style-loader": "0.13.1",
     "uikit": "2.27.1",
     "uikit-react": "0.6.13",
