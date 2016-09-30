@@ -80,7 +80,9 @@ renderInput.propTypes = {
   helpDisplay: PropTypes.oneOf(['inline', 'block']),
   id: PropTypes.string,
   inline: PropTypes.bool,
-  input: PropTypes.object, // @TODO replace with actual proptypes
+  input: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired, // @TODO replace with actual proptypes
   label: PropTypes.node,
   meta: PropTypes.object, // @TODO replace with actual proptypes
   wrapperClassName: PropTypes.string,
