@@ -8,7 +8,7 @@ redux-form-uikit
 [![NPM](https://nodei.co/npm/redux-form-uikit.png?downloadRank=true)](https://www.npmjs.com/package/redux-form-uikit)
 [![NPM](https://nodei.co/npm-dl/redux-form-uikit.png?months=3&height=2)](https://nodei.co/npm/redux-form-uikit/)
 
-<img src="https://uikit-react.io/logo.svg" width="256"/>
+<img src="https://uikit-react.io/public/logo.svg" width="256"/>
 
 ## Installation
 
