@@ -4,7 +4,7 @@ import { Input } from 'uikit-react'
 
 const renderInput = ({
   input,
-  meta: { touched, error, asyncValidating },
+  meta: { asyncValidating, error, touched },
   label,
   help,
   helpDisplay,
@@ -73,6 +73,14 @@ renderInput.defaultProps = {
 }
 
 renderInput.propTypes = {
+  input: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+  }).isRequired,
+  meta: PropTypes.shape({
+    asyncValidating: PropTypes.bool,
+    error: PropTypes.string,
+    touched: PropTypes.bool,
+  }).isRequired,
   errorClassName: PropTypes.string,
   errorDisplay: PropTypes.oneOf(['inline', 'block']),
   help: PropTypes.node,
@@ -80,11 +88,7 @@ renderInput.propTypes = {
   helpDisplay: PropTypes.oneOf(['inline', 'block']),
   id: PropTypes.string,
   inline: PropTypes.bool,
-  input: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-  }).isRequired,
   label: PropTypes.node,
-  meta: PropTypes.object, // @TODO replace with actual proptypes
   wrapperClassName: PropTypes.string,
 }
 
