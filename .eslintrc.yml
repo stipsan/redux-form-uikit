@@ -12,6 +12,7 @@ rules:
   react/no-direct-mutation-state: error
   react/no-string-refs: error
   react/jsx-handler-names: error
+  react/no-unused-prop-types: warn
   react/jsx-boolean-value:
     - error
     - never

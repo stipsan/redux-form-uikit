@@ -82,7 +82,7 @@ renderInput.propTypes = {
   inline: PropTypes.bool,
   input: PropTypes.shape({
     name: PropTypes.string.isRequired,
-  }).isRequired, // @TODO replace with actual proptypes
+  }).isRequired,
   label: PropTypes.node,
   meta: PropTypes.object, // @TODO replace with actual proptypes
   wrapperClassName: PropTypes.string,
