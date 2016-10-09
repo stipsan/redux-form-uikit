@@ -191,6 +191,35 @@ storiesOf('renderInput', module)
       </div>
     </div>
   ), { header: false, inline: true, propTables: null })
+  .addWithInfo('Textarea and Select', '', () => (
+    <div className="uk-margin-bottom uk-form-horizontal">
+      <Field
+        component={renderInput}
+        inputComponent="textarea"
+        label="Comment"
+        name="comment"
+        placeholder="Enter your comment…"
+      />
+      <Field
+        component={renderInput}
+        inputComponent={props => (
+          <select {...props}>
+            <option value="">Choose your color</option>
+            <option value="1">red</option>
+            <option value="2">green</option>
+            <option value="3">blue</option>
+          </select>
+        )}
+        label="Color"
+        name="color"
+      />
+      <div className="uk-form-row">
+        <div className="uk-form-controls">
+          <Button type="submit">Submit</Button>
+        </div>
+      </div>
+    </div>
+  ), { header: false, inline: true, propTables: null })
   /*
   .addWithInfo('Transition Validation Feedback', `
   If you have react-collapse in your dependencies you can pass 'shouldTransitionError' to activate animated reveal and collapse of validation errors.

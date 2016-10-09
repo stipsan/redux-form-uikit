@@ -1,5 +1,5 @@
 import cx from 'classnames'
-import { PropTypes } from 'react'
+import { PropTypes, createElement } from 'react'
 import { Input } from 'uikit-react'
 
 const renderInput = ({
@@ -12,20 +12,19 @@ const renderInput = ({
   errorClassName,
   helpClassName,
   inline,
+  inputComponent,
   wrapperClassName: customWrapperClassName,
   ...custom,
 }) => {
-  const component = (
-    <Input
-      autoComplete={input.name}
-      id={label ? input.name : undefined}
-      placeholder={label}
-      {...input}
-      {...custom}
-      danger={touched && !!error}
-      icon={asyncValidating === true ? 'spinner' : custom.icon}
-    />
-  )
+  const component = createElement(inputComponent, {
+    autoComplete: input.name,
+    id: label ? input.name : undefined,
+    placeholder: label,
+    ...input,
+    ...custom,
+    danger: touched && !!error,
+    icon: asyncValidating === true ? 'spinner' : custom.icon,
+  })
 
   const errorMessage = touched && error && (
     <p className={cx(`uk-form-help-${errorDisplay}`, errorClassName)}>
@@ -70,12 +69,14 @@ const renderInput = ({
 renderInput.defaultProps = {
   helpDisplay: 'inline',
   errorDisplay: 'inline',
+  inputComponent: Input,
 }
 
 renderInput.propTypes = {
   input: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
+  inputComponent: PropTypes.node.isRequired,
   meta: PropTypes.shape({
     asyncValidating: PropTypes.bool,
     error: PropTypes.string,
