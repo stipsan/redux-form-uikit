@@ -14,7 +14,7 @@ const renderInput = ({
   inline,
   inputComponent,
   wrapperClassName: customWrapperClassName,
-  ...custom,
+  ...custom
 }) => {
   const component = createElement(inputComponent, {
     autoComplete: input.name,
