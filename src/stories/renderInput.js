@@ -202,6 +202,7 @@ storiesOf('renderInput', module)
       />
       <Field
         component={renderInput}
+        /* eslint-disable react/jsx-no-bind */
         inputComponent={props => (
           <select {...props}>
             <option value="">Choose your color</option>
@@ -210,6 +211,7 @@ storiesOf('renderInput', module)
             <option value="3">blue</option>
           </select>
         )}
+        /* eslint-enable */
         label="Color"
         name="color"
       />
