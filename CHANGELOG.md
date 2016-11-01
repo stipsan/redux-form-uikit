@@ -9,10 +9,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 * Changelog.
 
-## Fixed
+### Fixed
 * `inputComponent` prop did not allow strings.
 
-## Deprecated
+### Deprecated
 * `autoComplete` will no longer be added automatically in next major release.
 
 ### Documentation
