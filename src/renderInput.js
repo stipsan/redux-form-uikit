@@ -3,7 +3,6 @@ import { PropTypes, createElement } from 'react'
 import { Input } from 'uikit-react'
 
 const renderInput = ({
-  autoComplete,
   input,
   meta: { asyncValidating, error, touched },
   label,
@@ -17,11 +16,8 @@ const renderInput = ({
   wrapperClassName: customWrapperClassName,
   ...custom
 }) => {
-  if (autoComplete === false) {
-    console.error('autoComplete is no longer set automatically in redux-form-uikit. You should review code that rely on this being set automatically. autoComplete={false} can be safely removed, however.')
-  }
-
   const component = createElement(inputComponent, {
+    autoComplete: input.name,
     id: label ? input.name : undefined,
     placeholder: label,
     ...input,
@@ -86,7 +82,6 @@ renderInput.propTypes = {
     error: PropTypes.string,
     touched: PropTypes.bool,
   }).isRequired,
-  autoComplete: PropTypes.string,
   errorClassName: PropTypes.string,
   errorDisplay: PropTypes.oneOf(['inline', 'block']),
   help: PropTypes.node,
