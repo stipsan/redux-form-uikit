@@ -13,7 +13,7 @@ redux-form-uikit
 ## Installation
 
 ```bash
-  $ npm install --save redux-form-uikit uikit-react
+  $ yarn add redux-form-uikit uikit-react
 ```
 
 ## Available Components

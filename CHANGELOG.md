@@ -9,6 +9,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 * Changelog.
 
+### Documentation
+* using Yarn.
+
 ## 1.1.0 - 2016-10-09
 ### Added
 * `inputComponent` prop to render other things than input, like textarea, select, or other React components.
