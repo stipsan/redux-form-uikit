@@ -24,7 +24,5 @@ This library makes no assumptions on how you provide the UIkit CSS; load it in a
 
 Check our [Storybook](http://form.uikit-react.io) to see docs and usage examples for each component in the library.
 
-We use GitHub Releases as our [Changelog](https://github.com/stipsan/redux-form-uikit/releases).
-
 Inspired by:
 * [redux-form-material-ui](https://github.com/erikras/redux-form-material-ui)
