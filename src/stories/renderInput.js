@@ -194,6 +194,7 @@ storiesOf('renderInput', module)
   .addWithInfo('Textarea and Select', '', () => (
     <div className="uk-margin-bottom uk-form-horizontal">
       <Field
+        autoComplete={false}
         component={renderInput}
         inputComponent="textarea"
         label="Comment"
