@@ -1,6 +1,6 @@
 {
   "name": "redux-form-uikit",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A set of wrapper components to facilitate using UIkit React with Redux Form",
   "main": "./lib",
   "scripts": {
@@ -14,7 +14,8 @@
     "storybook": "start-storybook -p 9001",
     "build-storybook": "build-storybook -o .out -s .storybook/static",
     "deploy-storybook": "storybook-to-ghpages",
-    "postpublish": "npm run deploy-storybook"
+    "postpublish": "gh-release && npm run deploy-storybook",
+    "postversion": "git add package.json && git commit -m \"chore(package): update version\""
   },
   "repository": {
     "type": "git",
@@ -46,7 +47,10 @@
     "setupFiles": [
       "<rootDir>/test/setup.js"
     ],
-    "testPathIgnorePatterns": ["<rootDir>/lib/", "<rootDir>/node_modules/"]
+    "testPathIgnorePatterns": [
+      "<rootDir>/lib/",
+      "<rootDir>/node_modules/"
+    ]
   },
   "homepage": "https://github.com/stipsan/redux-form-uikit",
   "devDependencies": {
@@ -77,6 +81,7 @@
     "expect": "1.20.2",
     "extract-text-webpack-plugin": "1.0.1",
     "file-loader": "0.9.0",
+    "gh-release": "2.1.0",
     "growl": "1.9.2",
     "jest-cli": "16.0.2",
     "jsdom": "9.8.3",
