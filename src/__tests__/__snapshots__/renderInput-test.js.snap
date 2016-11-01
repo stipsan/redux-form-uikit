@@ -9,7 +9,7 @@ exports[`renderInput allows overriding defaults 1`] = `
   <div
     className="uk-form-controls">
     <input
-      autoComplete={false}
+      autoComplete="email"
       className=""
       id="email-confirm"
       name="email"

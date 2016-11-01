@@ -222,7 +222,6 @@ describe('renderInput', () => {
     expect(renderer.create(
       <RenderInput
         {...props}
-        autoComplete={false}
         id="email-confirm"
         label="E-mail"
         placeholder="Confirm E-mail"

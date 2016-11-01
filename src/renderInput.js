@@ -76,7 +76,7 @@ renderInput.propTypes = {
   input: PropTypes.shape({
     name: PropTypes.string.isRequired,
   }).isRequired,
-  inputComponent: PropTypes.node.isRequired,
+  inputComponent: PropTypes.oneOfType([PropTypes.node, PropTypes.func]).isRequired,
   meta: PropTypes.shape({
     asyncValidating: PropTypes.bool,
     error: PropTypes.string,
