@@ -8,7 +8,7 @@ rules:
     - error
     - never
   react/no-danger: error
-  react/no-comment-textnodes: error
+  react/jsx-no-comment-textnodes: error
   react/no-direct-mutation-state: error
   react/no-string-refs: error
   react/jsx-handler-names: error

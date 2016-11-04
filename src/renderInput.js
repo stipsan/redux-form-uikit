@@ -21,6 +21,7 @@ const renderInput = ({
     console.error('autoComplete is no longer set automatically in redux-form-uikit. You should review code that rely on this being set automatically. autoComplete={false} can be safely removed, however.')
   }
   const component = createElement(inputComponent, {
+    autoComplete,
     id: label ? input.name : undefined,
     placeholder: label,
     ...input,
