@@ -33,6 +33,7 @@ describe('renderInput', () => {
       name: 'email',
     },
     placeholder: 'E-mail',
+    autoComplete: 'username',
   }
   it('renders correctly', () => {
     expect(renderer.create(

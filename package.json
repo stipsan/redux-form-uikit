@@ -10,11 +10,11 @@
     "coveralls": "coveralls < .coverage/lcov.info",
     "prebuild": "rm -rf lib",
     "build": "babel ./src --out-dir ./lib",
-    "prepublish": "npm run build",
+    "prepublish": "yarn run build",
     "storybook": "start-storybook -p 9001",
     "build-storybook": "build-storybook -o .out -s .storybook/static",
     "deploy-storybook": "storybook-to-ghpages",
-    "postpublish": "gh-release && npm run deploy-storybook",
+    "postpublish": "gh-release && yarn run deploy-storybook",
     "postversion": "git add package.json && git commit -m \"chore(package): update version\""
   },
   "repository": {
@@ -55,7 +55,7 @@
   "homepage": "https://github.com/stipsan/redux-form-uikit",
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.3.0",
-    "@kadira/storybook": "2.29.1",
+    "@kadira/storybook": "2.29.3",
     "@kadira/storybook-deployer": "1.2.0",
     "autoprefixer": "6.5.1",
     "babel-cli": "6.18.0",
