@@ -55,7 +55,7 @@
   "homepage": "https://github.com/stipsan/redux-form-uikit",
   "devDependencies": {
     "@kadira/react-storybook-addon-info": "3.3.0",
-    "@kadira/storybook": "2.29.3",
+    "@kadira/storybook": "2.29.4",
     "@kadira/storybook-deployer": "1.2.0",
     "autoprefixer": "6.5.2",
     "babel-cli": "6.18.0",
