@@ -99,7 +99,7 @@
     "redux-form": "6.5.0",
     "style-loader": "0.13.1",
     "uikit": "2.27.2",
-    "uikit-react": "2.1.0",
+    "uikit-react": "2.1.1",
     "url-loader": "0.5.7"
   },
   "peerDependencies": {
