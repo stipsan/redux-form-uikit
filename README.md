@@ -1,6 +1,8 @@
 redux-form-uikit
 ===============
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/stipsan/redux-form-uikit.svg)](https://greenkeeper.io/)
+
 [![Build Status](https://travis-ci.org/stipsan/redux-form-uikit.svg?branch=master)](https://travis-ci.org/stipsan/redux-form-uikit)
 [![Coverage Status](https://coveralls.io/repos/github/stipsan/redux-form-uikit/badge.svg)](https://coveralls.io/github/stipsan/redux-form-uikit)
 [![npm package](https://img.shields.io/npm/dm/redux-form-uikit.svg)](https://www.npmjs.com/package/redux-form-uikit)
