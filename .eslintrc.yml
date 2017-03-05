@@ -41,3 +41,10 @@ rules:
   global-require: off
   no-underscore-dangle: off
   import/imports-first: off
+  comma-dangle:
+   - error
+   - arrays: always-multiline
+     objects: always-multiline
+     imports: always-multiline
+     exports: always-multiline
+     functions: never
