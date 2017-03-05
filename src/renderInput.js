@@ -12,6 +12,7 @@ const renderInput = ({
   errorDisplay,
   errorClassName,
   helpClassName,
+  id,
   inline,
   inputComponent,
   wrapperClassName: customWrapperClassName,
@@ -22,7 +23,7 @@ const renderInput = ({
   }
   const component = createElement(inputComponent, {
     autoComplete,
-    id: label ? input.name : undefined,
+    id: id || (label ? input.name : undefined),
     placeholder: label,
     ...input,
     ...custom,
@@ -52,7 +53,7 @@ const renderInput = ({
   if (label) {
     return (
       <div className={wrapperClassName}>
-        <label className="uk-form-label" htmlFor={custom.id || input.name}>{label}</label>
+        <label className="uk-form-label" htmlFor={id || input.name}>{label}</label>
         <div className="uk-form-controls">
           {component}
           {inlineMessage}
@@ -71,9 +72,17 @@ const renderInput = ({
 }
 
 renderInput.defaultProps = {
-  helpDisplay: 'inline',
+  autoComplete: '',
+  errorClassName: '',
   errorDisplay: 'inline',
+  help: false,
+  helpClassName: '',
+  helpDisplay: 'inline',
+  id: '',
+  inline: false,
   inputComponent: Input,
+  label: false,
+  wrapperClassName: '',
 }
 
 renderInput.propTypes = {
