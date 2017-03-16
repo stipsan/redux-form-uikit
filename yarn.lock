@@ -4089,6 +4089,10 @@ node-pre-gyp@^0.6.29:
     tar "~2.2.1"
     tar-pack "~3.3.0"
 
+node-promise@^0.5.10:
+  version "0.5.12"
+  resolved "https://registry.yarnpkg.com/node-promise/-/node-promise-0.5.12.tgz#b0acf9bc2229a76407c077b926592f99b3b4e1f1"
+
 nomnom@^1.8.1:
   version "1.8.1"
   resolved "https://registry.yarnpkg.com/nomnom/-/nomnom-1.8.1.tgz#2151f722472ba79e50a76fc125bb8c8f2e4dc2a7"
@@ -5237,6 +5241,12 @@ sax@^1.2.1, sax@~1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/sax/-/sax-1.2.1.tgz#7b8e656190b228e81a66aea748480d828cd2d37a"
 
+semver-truncate@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/semver-truncate/-/semver-truncate-1.1.2.tgz#57f41de69707a62709a7e0104ba2117109ea47e8"
+  dependencies:
+    semver "^5.3.0"
+
 "semver@2 || 3 || 4 || 5", semver@^5.3.0, semver@~5.3.0:
   version "5.3.0"
   resolved "https://registry.yarnpkg.com/semver/-/semver-5.3.0.tgz#9b2ce5d3de02d17c6012ad326aa6b4d0cf54f94f"
@@ -5717,9 +5727,11 @@ uikit-react@2.1.1:
     react-input-autosize "1.1.0"
     react-portal "^3.0.0"
 
-uikit@3.0.0-beta.18:
-  version "3.0.0-beta.18"
-  resolved "https://registry.yarnpkg.com/uikit/-/uikit-3.0.0-beta.18.tgz#cfbe0749cbfd4dfe7103f59159fd9ec565d55a2a"
+uikit@2.27.2:
+  version "2.27.2"
+  resolved "https://registry.yarnpkg.com/uikit/-/uikit-2.27.2.tgz#4936be0a041b3e030292d401e5344bb1c2c48f08"
+  dependencies:
+    node-promise "^0.5.10"
 
 underscore@~1.6.0:
   version "1.6.0"
