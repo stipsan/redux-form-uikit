@@ -106,7 +106,7 @@
   },
   "peerDependencies": {
     "redux-form": ">=6.0.0-rc.5",
-    "uikit-react": "*"
+    "uikit-react": ">=2.3.1"
   },
   "dependencies": {
     "classnames": "2.2.5"
