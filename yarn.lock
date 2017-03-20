@@ -3700,12 +3700,13 @@ lcov-parse@0.0.10:
   version "0.0.10"
   resolved "https://registry.yarnpkg.com/lcov-parse/-/lcov-parse-0.0.10.tgz#1b0b8ff9ac9c7889250582b70b71315d9da6d9a3"
 
-less-loader@3.0.0:
-  version "3.0.0"
-  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-3.0.0.tgz#199f7f4a79ff8a195ab47649d71c6d7109da32b9"
+less-loader@4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/less-loader/-/less-loader-4.0.0.tgz#1bc89e6ed1f817972d8fbf79dc6845c35dd8a7f8"
   dependencies:
     clone-deep "^0.2.4"
     loader-utils "^1.0.2"
+    pify "^2.3.0"
 
 less@2.7.2:
   version "2.7.2"
@@ -4390,7 +4391,7 @@ pbkdf2-compat@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/pbkdf2-compat/-/pbkdf2-compat-2.0.1.tgz#b6e0c8fa99494d94e0511575802a59a5c142f288"
 
-pify@^2.0.0:
+pify@^2.0.0, pify@^2.3.0:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/pify/-/pify-2.3.0.tgz#ed141a6ac043a849ea588498e7dca8b15330e90c"
 
