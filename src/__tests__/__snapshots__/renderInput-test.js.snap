@@ -15,7 +15,7 @@ exports[`renderInput allows overriding defaults 1`] = `
   >
     <input
       autoComplete="username"
-      className=""
+      className="uk-input "
       id="email-confirm"
       name="email"
       onBlur={[Function]}
@@ -36,7 +36,7 @@ exports[`renderInput prevents overriding the danger prop on <Input /> 1`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -56,7 +56,7 @@ exports[`renderInput prevents overriding the danger prop on <Input /> 2`] = `
 >
   <input
     autoComplete="username"
-    className="uk-form-danger"
+    className="uk-input  uk-form-danger"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -81,7 +81,7 @@ exports[`renderInput prioritizes error over help 1`] = `
 >
   <input
     autoComplete="username"
-    className="uk-form-danger"
+    className="uk-input  uk-form-danger"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -106,7 +106,7 @@ exports[`renderInput prioritizes error over help 2`] = `
 >
   <input
     autoComplete="username"
-    className="uk-form-danger"
+    className="uk-input  uk-form-danger"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -140,7 +140,7 @@ exports[`renderInput prioritizes error over help 3`] = `
   >
     <input
       autoComplete="username"
-      className="uk-form-danger"
+      className="uk-input  uk-form-danger"
       id="email"
       name="email"
       onBlur={[Function]}
@@ -175,7 +175,7 @@ exports[`renderInput prioritizes error over help 4`] = `
   >
     <input
       autoComplete="username"
-      className="uk-form-danger"
+      className="uk-input  uk-form-danger"
       id="email"
       name="email"
       onBlur={[Function]}
@@ -207,7 +207,7 @@ exports[`renderInput renders asyncValidating status correctly 1`] = `
     />
     <input
       autoComplete="username"
-      className=""
+      className="uk-input "
       id={undefined}
       name="email"
       onBlur={[Function]}
@@ -234,7 +234,7 @@ exports[`renderInput renders asyncValidating status correctly 2`] = `
     />
     <input
       autoComplete="username"
-      className=""
+      className="uk-input "
       id={undefined}
       name="email"
       onBlur={[Function]}
@@ -255,7 +255,7 @@ exports[`renderInput renders correctly 1`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -284,7 +284,7 @@ exports[`renderInput renders correctly 2`] = `
   >
     <input
       autoComplete="username"
-      className=""
+      className="uk-input "
       id="email"
       name="email"
       onBlur={[Function]}
@@ -306,7 +306,7 @@ exports[`renderInput renders error messages correctly 1`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -326,7 +326,7 @@ exports[`renderInput renders error messages correctly 2`] = `
 >
   <input
     autoComplete="username"
-    className="uk-form-danger"
+    className="uk-input  uk-form-danger"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -351,7 +351,7 @@ exports[`renderInput renders error messages correctly 3`] = `
 >
   <input
     autoComplete="username"
-    className="uk-form-danger"
+    className="uk-input  uk-form-danger"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -376,7 +376,7 @@ exports[`renderInput renders error messages correctly 4`] = `
 >
   <input
     autoComplete="username"
-    className="uk-form-danger"
+    className="uk-input  uk-form-danger"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -410,7 +410,7 @@ exports[`renderInput renders error messages correctly 5`] = `
   >
     <input
       autoComplete="username"
-      className="uk-form-danger"
+      className="uk-input  uk-form-danger"
       id="email"
       name="email"
       onBlur={[Function]}
@@ -445,7 +445,7 @@ exports[`renderInput renders error messages correctly 6`] = `
   >
     <input
       autoComplete="username"
-      className="uk-form-danger"
+      className="uk-input  uk-form-danger"
       id="email"
       name="email"
       onBlur={[Function]}
@@ -471,7 +471,7 @@ exports[`renderInput renders help messages correctly 1`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -496,7 +496,7 @@ exports[`renderInput renders help messages correctly 2`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -521,7 +521,7 @@ exports[`renderInput renders help messages correctly 3`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -546,7 +546,7 @@ exports[`renderInput renders help messages correctly 4`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -577,7 +577,7 @@ exports[`renderInput supports custom wrapper className 1`] = `
 >
   <input
     autoComplete="username"
-    className=""
+    className="uk-input "
     id={undefined}
     name="email"
     onBlur={[Function]}
