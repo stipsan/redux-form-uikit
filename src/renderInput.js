@@ -16,7 +16,8 @@ const renderInput = ({
   inline,
   inputComponent,
   wrapperClassName: customWrapperClassName,
-  ...custom
+  ...custom,
+  icon,
 }) => {
   if (autoComplete === false) {
     console.error('autoComplete is no longer set automatically in redux-form-uikit. You should review code that rely on this being set automatically. autoComplete={false} can be safely removed, however.')
@@ -28,8 +29,10 @@ const renderInput = ({
     ...input,
     ...custom,
     danger: touched && !!error,
-    icon: asyncValidating === true ? 'spinner' : custom.icon,
+    //icon: asyncValidating === true ? 'spinner' : custom.icon,
   })
+
+  console.log(component)
 
   const errorMessage = touched && error && (
     <p className={cx(`uk-form-help-${errorDisplay}`, errorClassName)}>
@@ -50,11 +53,14 @@ const renderInput = ({
     'uk-form-row': !inline,
     'uk-display-inline-block': inline,
   })
+  const createIcon = icon ? '<p>icon</p>' : ''
+
   if (label) {
     return (
       <div className={wrapperClassName}>
         <label className="uk-form-label" htmlFor={id || input.name}>{label}</label>
         <div className="uk-form-controls">
+          {createIcon}
           {component}
           {inlineMessage}
           {blockMessage}

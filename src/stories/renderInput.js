@@ -1,6 +1,6 @@
 import { storiesOf } from '@kadira/storybook'
 import { Field } from 'redux-form'
-import { Button, Input } from 'uikit-react'
+import { Button, Input, Icon } from 'uikit-react'
 
 import renderInput from '../renderInput'
 
@@ -31,20 +31,28 @@ storiesOf('renderInput', module)
   More information on supported props can be seen [here](http://uikit-react.io/input).
   `, () => (
     <div className="uk-margin-bottom">
-      <Field
-        component={renderInput}
-        name="email"
-        placeholder="E-mail"
-        type="email"
-      />
-      <Field
-        component={renderInput}
-        name="password"
-        placeholder="Password"
-        type="password"
-      />
-      <div className="uk-form-row">
-        <Button type="submit">Submit</Button>
+      <div className="uk-margin">
+        <Field
+          className="uk-form-width-medium"
+          component={renderInput}
+          name="email"
+          placeholder="E-mail"
+          type="email"
+        />
+      </div>
+      <div className="uk-margin">
+        <Field
+          className="uk-form-width-medium"
+          component={renderInput}
+          name="password"
+          placeholder="Password"
+          type="password"
+        />
+      </div>
+      <div className="uk-margin">
+        <div className="uk-form-row">
+          <Button type="submit">Submit</Button>
+        </div>
       </div>
     </div>
   ), { header: false, inline: true, propTables: [InputProps], mtrcConf: { // eslint-disable-line
@@ -179,14 +187,17 @@ storiesOf('renderInput', module)
   Try entering \`batman\` or \`superman\`.
   `, () => (
     <div className="uk-margin-bottom">
-      <Field
-        component={renderInput}
-        icon="user"
-        name="username"
-      />
+      <div className="uk-margin">
+        <Field
+          component={renderInput}
+          icon="user"
+          name="username"
+        />
+      </div>
       <div className="uk-form-row">
         <Button primary type="submit">
-          Register <i className="uk-icon-chevron-circle-right" />
+          Register
+          <span className="uk-margin-small-left"><Icon icon="play-circle" /></span>
         </Button>
       </div>
     </div>
@@ -194,6 +205,7 @@ storiesOf('renderInput', module)
   .addWithInfo('Textarea and Select', '', () => (
     <div className="uk-margin-bottom uk-form-horizontal">
       <Field
+        className="uk-textarea"
         component={renderInput}
         inputComponent="textarea"
         label="Comment"
@@ -201,6 +213,7 @@ storiesOf('renderInput', module)
         placeholder="Enter your comment…"
       />
       <Field
+        className="uk-select"
         component={renderInput}
         /* eslint-disable react/jsx-no-bind */
         inputComponent={props => (
