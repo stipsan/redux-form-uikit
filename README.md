@@ -24,7 +24,7 @@ redux-form-uikit
 
 This library makes no assumptions on how you provide the UIkit CSS; load it in any way you like.
 
-Check our [Storybook](http://form.uikit-react.io) to see docs and usage examples for each component in the library.
+Check our [storybook](http://form.uikit-react.io) to see docs and usage examples for each component in the library.
 
 Inspired by:
 * [redux-form-material-ui](https://github.com/erikras/redux-form-material-ui)
