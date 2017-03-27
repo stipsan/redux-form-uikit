@@ -16,8 +16,7 @@ const renderInput = ({
   inline,
   inputComponent,
   wrapperClassName: customWrapperClassName,
-  ...custom,
-  icon,
+  ...custom
 }) => {
   if (autoComplete === false) {
     console.error('autoComplete is no longer set automatically in redux-form-uikit. You should review code that rely on this being set automatically. autoComplete={false} can be safely removed, however.')
@@ -29,20 +28,28 @@ const renderInput = ({
     ...input,
     ...custom,
     danger: touched && !!error,
-    //icon: asyncValidating === true ? 'spinner' : custom.icon,
+    icon: asyncValidating === true ? 'spinner' : custom.icon,
   })
 
-  console.log(component)
-
   const errorMessage = touched && error && (
-    <p className={cx(`uk-form-help-${errorDisplay}`, errorClassName)}>
+    <div
+      className={cx(`uk-text-danger uk-${errorDisplay}`, {
+        'uk-margin-small-left': errorDisplay === 'inline',
+        'uk-margin-bottom': errorDisplay === 'block',
+      }, errorClassName)}
+    >
       {error}
-    </p>
+    </div>
   )
   const helpMessage = help && (
-    <p className={cx(`uk-form-help-${helpDisplay}`, helpClassName)}>
+    <div
+      className={cx(`uk-${helpDisplay}`, {
+        'uk-margin-small-left': helpDisplay === 'inline',
+        'uk-margin-bottom': helpDisplay === 'block',
+      }, helpClassName)}
+    >
       {help}
-    </p>
+    </div>
   )
   const inlineMessage = (errorDisplay === 'inline' && errorMessage) ||
                         (helpDisplay === 'inline' && helpMessage)
@@ -50,17 +57,15 @@ const renderInput = ({
                        (helpDisplay === 'block' && helpMessage)
 
   const wrapperClassName = cx(customWrapperClassName, {
-    'uk-form-row': !inline,
-    'uk-display-inline-block': inline,
+    'uk-margin': !inline,
+    'uk-inline': inline,
   })
-  const createIcon = icon ? '<p>icon</p>' : ''
 
   if (label) {
     return (
       <div className={wrapperClassName}>
         <label className="uk-form-label" htmlFor={id || input.name}>{label}</label>
         <div className="uk-form-controls">
-          {createIcon}
           {component}
           {inlineMessage}
           {blockMessage}
