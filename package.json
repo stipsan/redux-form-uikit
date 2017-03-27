@@ -100,7 +100,7 @@
     "semver-truncate": "^1.1.2",
     "style-loader": "0.16.0",
     "uikit": "3.0.0-beta.18",
-    "uikit-react": "3.0.0-beta.1",
+    "uikit-react": "3.0.0-beta.2",
     "url-loader": "0.5.8"
   },
   "dependencies": {
