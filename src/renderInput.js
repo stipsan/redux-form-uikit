@@ -32,14 +32,24 @@ const renderInput = ({
   })
 
   const errorMessage = touched && error && (
-    <p className={cx(`uk-form-help-${errorDisplay}`, errorClassName)}>
+    <div
+      className={cx(`uk-text-danger uk-${errorDisplay}`, {
+        'uk-margin-small-left': errorDisplay === 'inline',
+        'uk-margin-bottom': errorDisplay === 'block',
+      }, errorClassName)}
+    >
       {error}
-    </p>
+    </div>
   )
   const helpMessage = help && (
-    <p className={cx(`uk-form-help-${helpDisplay}`, helpClassName)}>
+    <div
+      className={cx(`uk-${helpDisplay}`, {
+        'uk-margin-small-left': helpDisplay === 'inline',
+        'uk-margin-bottom': helpDisplay === 'block',
+      }, helpClassName)}
+    >
       {help}
-    </p>
+    </div>
   )
   const inlineMessage = (errorDisplay === 'inline' && errorMessage) ||
                         (helpDisplay === 'inline' && helpMessage)
@@ -47,9 +57,10 @@ const renderInput = ({
                        (helpDisplay === 'block' && helpMessage)
 
   const wrapperClassName = cx(customWrapperClassName, {
-    'uk-form-row': !inline,
-    'uk-display-inline-block': inline,
+    'uk-margin': !inline,
+    'uk-inline': inline,
   })
+
   if (label) {
     return (
       <div className={wrapperClassName}>
