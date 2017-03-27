@@ -1,6 +1,5 @@
 import 'uikit/src/less/uikit.theme.less'
 
-import Logo from 'babel-loader!uikit-react/.storybook/Logo'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import { reducer } from 'redux-form'
@@ -28,7 +27,9 @@ const Root = (fn, { kind, story }) => (
           </ul>
         </div>
         <div className="uk-navbar-center">
-          <Logo />
+          <a className="uk-navbar-item uk-logo">
+            <img alt="UIkit React Logo" src="https://uikit-react.io/logo.svg" style={{ height: '64px' }} />
+          </a>
           <div className="uk-navbar-center-right">
             <div>
               <div className="uk-flex uk-flex-middle" style={{ height: '80px' }}>
