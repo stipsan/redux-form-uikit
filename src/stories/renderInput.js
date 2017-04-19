@@ -9,6 +9,8 @@ renderInput.displayName = 'renderInput'
 Field.displayName = 'Field'
 Button.displayName = 'Button'
 
+// @TODO temp fix
+window.renderInput = renderInput
 
 // Make sure only user-land propTypes are shown (and not props relevant to redux-form internals)
 /* eslint-disable no-unused-vars */
@@ -32,13 +34,13 @@ storiesOf('renderInput', module)
   `, () => (
     <div className="uk-margin-bottom">
       <Field
-        component={renderInput}
+        component={window.renderInput}
         name="email"
         placeholder="E-mail"
         type="email"
       />
       <Field
-        component={renderInput}
+        component={window.renderInput}
         name="password"
         placeholder="Password"
         type="password"
@@ -53,13 +55,13 @@ storiesOf('renderInput', module)
   .addWithInfo('Stacked Form', '', () => (
     <div className="uk-margin-bottom uk-form-stacked">
       <Field
-        component={renderInput}
+        component={window.renderInput}
         label="E-mail"
         name="email"
         type="email"
       />
       <Field
-        component={renderInput}
+        component={window.renderInput}
         errorDisplay="block"
         label="Password"
         name="password"
@@ -76,13 +78,13 @@ storiesOf('renderInput', module)
   `, () => (
     <div className="uk-margin-bottom uk-form-horizontal">
       <Field
-        component={renderInput}
+        component={window.renderInput}
         label="E-mail"
         name="email"
         type="email"
       />
       <Field
-        component={renderInput}
+        component={window.renderInput}
         errorDisplay="block"
         label="Password"
         name="password"
@@ -98,7 +100,7 @@ storiesOf('renderInput', module)
   .addWithInfo('Form Help', '', () => (
     <div className="uk-margin-bottom uk-form-horizontal">
       <Field
-        component={renderInput}
+        component={window.renderInput}
         errorClassName="uk-text-danger"
         help="This message is replaced by any validation errors."
         label="E-mail"
@@ -106,7 +108,7 @@ storiesOf('renderInput', module)
         type="email"
       />
       <Field
-        component={renderInput}
+        component={window.renderInput}
         errorClassName="uk-text-danger"
         errorDisplay="block"
         help="This message stays since errorDisplay=block."
@@ -115,7 +117,7 @@ storiesOf('renderInput', module)
         type="password"
       />
       <Field
-        component={renderInput}
+        component={window.renderInput}
         errorClassName="uk-text-danger"
         help={<span>You can have <code>error</code> and <code>help</code> swap places as well.</span>}
         helpDisplay="block"
@@ -138,7 +140,7 @@ storiesOf('renderInput', module)
           <Field
             flip
             inline
-            component={renderInput}
+            component={window.renderInput}
             icon="search"
             name="search"
             type="search"
@@ -149,7 +151,7 @@ storiesOf('renderInput', module)
           <div className="uk-navbar-content">
             <Field
               inline
-              component={renderInput}
+              component={window.renderInput}
               errorClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
               errorDisplay="block"
               name="email"
@@ -160,7 +162,7 @@ storiesOf('renderInput', module)
             />
             <Field
               inline
-              component={renderInput}
+              component={window.renderInput}
               errorClassName="uk-position-absolute uk-overlay-bottom uk-alert uk-alert-danger uk-margin-small-top"
               errorDisplay="block"
               name="password"
@@ -180,7 +182,7 @@ storiesOf('renderInput', module)
   `, () => (
     <div className="uk-margin-bottom">
       <Field
-        component={renderInput}
+        component={window.renderInput}
         icon="user"
         name="username"
       />
