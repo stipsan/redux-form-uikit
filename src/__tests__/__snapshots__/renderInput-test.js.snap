@@ -26,6 +26,7 @@ exports[`allows overriding defaults 1`] = `
       onFocus={[Function]}
       placeholder="Confirm E-mail"
       value=""
+      width={false}
     />
   </div>
 </div>
@@ -48,6 +49,7 @@ exports[`prevents overriding the danger prop on <Input /> 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
@@ -69,6 +71,7 @@ exports[`prevents overriding the danger prop on <Input /> 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-text-danger uk-inline uk-margin-small-left"
@@ -95,6 +98,7 @@ exports[`prioritizes error over help 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-text-danger uk-inline uk-margin-small-left"
@@ -121,6 +125,7 @@ exports[`prioritizes error over help 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-text-danger uk-block uk-margin-bottom"
@@ -156,6 +161,7 @@ exports[`prioritizes error over help 3`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
     <div
       className="uk-text-danger uk-inline uk-margin-small-left"
@@ -192,6 +198,7 @@ exports[`prioritizes error over help 4`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
     <div
       className="uk-text-danger uk-block uk-margin-bottom"
@@ -219,6 +226,7 @@ exports[`renders asyncValidating status correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
@@ -241,6 +249,7 @@ exports[`renders asyncValidating status correctly 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
@@ -262,6 +271,7 @@ exports[`renders correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
@@ -293,6 +303,7 @@ exports[`renders correctly 2`] = `
       placeholder="E-mail"
       type="email"
       value=""
+      width={false}
     />
   </div>
 </div>
@@ -315,6 +326,7 @@ exports[`renders error messages correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
@@ -336,6 +348,7 @@ exports[`renders error messages correctly 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-text-danger uk-inline uk-margin-small-left"
@@ -362,6 +375,7 @@ exports[`renders error messages correctly 3`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-text-danger uk-inline uk-margin-small-left uk-text-danger"
@@ -388,6 +402,7 @@ exports[`renders error messages correctly 4`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-text-danger uk-block uk-margin-bottom"
@@ -423,6 +438,7 @@ exports[`renders error messages correctly 5`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
     <div
       className="uk-text-danger uk-inline uk-margin-small-left"
@@ -459,6 +475,7 @@ exports[`renders error messages correctly 6`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
     <div
       className="uk-text-danger uk-block uk-margin-bottom"
@@ -486,6 +503,7 @@ exports[`renders help messages correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-inline uk-margin-small-left"
@@ -512,6 +530,7 @@ exports[`renders help messages correctly 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-inline uk-margin-small-left uk-text-warning"
@@ -538,6 +557,7 @@ exports[`renders help messages correctly 3`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-block uk-margin-bottom"
@@ -564,6 +584,7 @@ exports[`renders help messages correctly 4`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
   <div
     className="uk-inline uk-margin-small-left"
@@ -596,6 +617,7 @@ exports[`supports custom wrapper className 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
