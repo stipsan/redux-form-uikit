@@ -1,6 +1,7 @@
 import cx from 'classnames'
-import { PropTypes, createElement } from 'react'
+import { createElement } from 'react'
 import { Input } from 'uikit-react'
+import PropTypes from 'prop-types'
 
 const renderInput = ({
   autoComplete,
@@ -85,7 +86,7 @@ const renderInput = ({
 renderInput.defaultProps = {
   autoComplete: '',
   errorClassName: '',
-  errorDisplay: 'inline',
+  errorDisplay: 'block',
   help: false,
   helpClassName: '',
   helpDisplay: 'inline',
