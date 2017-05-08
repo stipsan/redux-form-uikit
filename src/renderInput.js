@@ -1,6 +1,7 @@
 import cx from 'classnames'
-import { PropTypes, createElement } from 'react'
+import { createElement } from 'react'
 import { Input } from 'uikit-react'
+import PropTypes from 'prop-types'
 
 const renderInput = ({
   autoComplete,
@@ -16,6 +17,7 @@ const renderInput = ({
   inline,
   inputComponent,
   wrapperClassName: customWrapperClassName,
+  width,
   ...custom
 }) => {
   if (autoComplete === false) {
@@ -27,14 +29,16 @@ const renderInput = ({
     placeholder: label,
     ...input,
     ...custom,
+    width,
     danger: touched && !!error,
     icon: asyncValidating === true ? 'spinner' : custom.icon,
   })
 
+
   const errorMessage = touched && error && (
     <div
       className={cx(`uk-text-danger uk-${errorDisplay}`, {
-        'uk-margin-small-left': errorDisplay === 'inline',
+        'uk-margin-small-left': errorDisplay === 'inline' && width !== 'full',
         'uk-margin-bottom': errorDisplay === 'block',
       }, errorClassName)}
     >
@@ -94,6 +98,7 @@ renderInput.defaultProps = {
   inputComponent: Input,
   label: false,
   wrapperClassName: '',
+  width: false,
 }
 
 renderInput.propTypes = {
@@ -115,6 +120,7 @@ renderInput.propTypes = {
   id: PropTypes.string,
   inline: PropTypes.bool,
   label: PropTypes.node,
+  width: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
   wrapperClassName: PropTypes.string,
 }
 
