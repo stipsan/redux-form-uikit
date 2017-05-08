@@ -87,7 +87,7 @@
     "json-loader": "0.5.4",
     "less": "2.7.2",
     "less-loader": "4.0.3",
-    "postcss-loader": "2.0.0",
+    "postcss-loader": "2.0.1",
     "raw-loader": "^0.5.1",
     "react": "15.5.4",
     "react-addons-test-utils": "15.5.1",
