@@ -1,4 +1,4 @@
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import { Field } from 'redux-form'
 import { Button, Input, Icon } from 'uikit-react'
 

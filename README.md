@@ -1,14 +1,4 @@
-redux-form-uikit
-===============
-
-[![Greenkeeper badge](https://badges.greenkeeper.io/stipsan/redux-form-uikit.svg)](https://greenkeeper.io/)
-
-[![Build Status](https://travis-ci.org/stipsan/redux-form-uikit.svg?branch=master)](https://travis-ci.org/stipsan/redux-form-uikit)
-[![Coverage Status](https://coveralls.io/repos/github/stipsan/redux-form-uikit/badge.svg)](https://coveralls.io/github/stipsan/redux-form-uikit)
-[![npm package](https://img.shields.io/npm/dm/redux-form-uikit.svg)](https://www.npmjs.com/package/redux-form-uikit)
-
-[![NPM](https://nodei.co/npm/redux-form-uikit.png?downloadRank=true)](https://www.npmjs.com/package/redux-form-uikit)
-[![NPM](https://nodei.co/npm-dl/redux-form-uikit.png?months=3&height=2)](https://nodei.co/npm/redux-form-uikit/)
+# redux-form-uikit &middot; [![CircleCI Status](https://img.shields.io/circleci/project/github/stipsan/redux-form-uikit.svg?style=flat-square)](https://circleci.com/gh/stipsan/redux-form-uikit) [![Coverage Status](https://img.shields.io/coveralls/stipsan/redux-form-uikit.svg?style=flat-square)](https://coveralls.io/github/stipsan/redux-form-uikit) [![npm version](https://img.shields.io/npm/v/redux-form-uikit.svg?style=flat-square)](https://www.npmjs.com/package/redux-form-uikit) [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square)](https://github.com/semantic-release/semantic-release)
 
 <img src="https://uikit-react.io/logo.svg" width="256"/>
 
