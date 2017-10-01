@@ -21,6 +21,7 @@ const renderInput = ({
   ...custom
 }) => {
   if (autoComplete === false) {
+    // eslint-disable-next-line no-console
     console.error('autoComplete is no longer set automatically in redux-form-uikit. You should review code that rely on this being set automatically. autoComplete={false} can be safely removed, however.')
   }
   const component = createElement(inputComponent, {

@@ -1,4 +1,4 @@
-import { storiesOf } from '@kadira/storybook'
+import { storiesOf } from '@storybook/react'
 import { Field } from 'redux-form'
 import { Button, Input, Icon } from 'uikit-react'
 
@@ -15,7 +15,7 @@ Button.displayName = 'Button'
 const { input: skipInput, meta: skipMeta, ...renderInputPropTypes } = renderInput.propTypes
 const { danger: skipDanger, success: skipSuccess, ...InputPropTypes } = Input.propTypes
 
-/* eslint-enable*/
+/* eslint-enable */
 const InputProps = () => <input />
 InputProps.propTypes = {
   ...InputPropTypes,
@@ -27,7 +27,7 @@ storiesOf('renderInput', module)
   /* eslint-disable max-len */
   .addWithInfo('Basic Usage', `
   ---
-  \`renderInput\` is wrapping the \`<Input />\` component from [\`uikit-react\`](https://uikit-react.io).
+  renderInput is wrapping the <Input /> component from [uikit-react](https://uikit-react.io).
 
   More information on supported props can be seen [here](http://uikit-react.io/input).
   `, () => (
@@ -77,7 +77,7 @@ storiesOf('renderInput', module)
       ), { header: false, inline: true, propTables: null })
       .addWithInfo('Horizontal Form', `
       ---
-      On smaller devices the form will render as \`stacked\`.
+      On smaller devices the form will render as stacked.
       `, () => (
         <div className="uk-margin-bottom uk-form-horizontal">
           <Field
@@ -189,7 +189,7 @@ storiesOf('renderInput', module)
         </div>
       ), { header: false, inline: true, propTables: null })
           .addWithInfo('Async Validation', `
-          Try entering \`batman\` or \`superman\`.
+          Try entering batman or superman.
           `, () => (
             <div className="uk-margin-bottom">
               <div className="uk-margin">

@@ -1,5 +1,5 @@
-import { action } from '@kadira/storybook'
-import { PropTypes } from 'react'
+import { action } from '@storybook/react'
+import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
 
