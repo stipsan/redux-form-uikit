@@ -38,6 +38,7 @@ rules:
   react/react-in-jsx-scope: off
   react/jsx-filename-extension: off
   import/no-extraneous-dependencies: off
+  jsx-a11y/img-has-alt: off
   global-require: off
   no-underscore-dangle: off
   import/imports-first: off

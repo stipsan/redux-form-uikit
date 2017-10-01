@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renderInput allows overriding defaults 1`] = `
+exports[`allows overriding defaults 1`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
   <label
     className="uk-form-label"
@@ -13,9 +13,10 @@ exports[`renderInput allows overriding defaults 1`] = `
   <div
     className="uk-form-controls"
   >
-    <input
+    <Input
       autoComplete="username"
-      className=""
+      danger={false}
+      icon={undefined}
       id="email-confirm"
       name="email"
       onBlur={[Function]}
@@ -25,18 +26,20 @@ exports[`renderInput allows overriding defaults 1`] = `
       onFocus={[Function]}
       placeholder="Confirm E-mail"
       value=""
+      width={false}
     />
   </div>
 </div>
 `;
 
-exports[`renderInput prevents overriding the danger prop on <Input /> 1`] = `
+exports[`prevents overriding the danger prop on <Input /> 1`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -46,17 +49,19 @@ exports[`renderInput prevents overriding the danger prop on <Input /> 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
 
-exports[`renderInput prevents overriding the danger prop on <Input /> 2`] = `
+exports[`prevents overriding the danger prop on <Input /> 2`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className="uk-form-danger"
+    danger={true}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -66,22 +71,24 @@ exports[`renderInput prevents overriding the danger prop on <Input /> 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline"
+  <div
+    className="uk-text-danger uk-inline uk-margin-small-left"
   >
     Required
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput prioritizes error over help 1`] = `
+exports[`prioritizes error over help 1`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className="uk-form-danger"
+    danger={true}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -91,22 +98,24 @@ exports[`renderInput prioritizes error over help 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline"
+  <div
+    className="uk-text-danger uk-inline uk-margin-small-left"
   >
     Errors have precedence.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput prioritizes error over help 2`] = `
+exports[`prioritizes error over help 2`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className="uk-form-danger"
+    danger={true}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -116,18 +125,19 @@ exports[`renderInput prioritizes error over help 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-block"
+  <div
+    className="uk-text-danger uk-block uk-margin-bottom"
   >
     Errors have precedence.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput prioritizes error over help 3`] = `
+exports[`prioritizes error over help 3`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
   <label
     className="uk-form-label"
@@ -138,9 +148,10 @@ exports[`renderInput prioritizes error over help 3`] = `
   <div
     className="uk-form-controls"
   >
-    <input
+    <Input
       autoComplete="username"
-      className="uk-form-danger"
+      danger={true}
+      icon={undefined}
       id="email"
       name="email"
       onBlur={[Function]}
@@ -150,19 +161,20 @@ exports[`renderInput prioritizes error over help 3`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
-    <p
-      className="uk-form-help-inline"
+    <div
+      className="uk-text-danger uk-inline uk-margin-small-left"
     >
       Errors have precedence.
-    </p>
+    </div>
   </div>
 </div>
 `;
 
-exports[`renderInput prioritizes error over help 4`] = `
+exports[`prioritizes error over help 4`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
   <label
     className="uk-form-label"
@@ -173,9 +185,10 @@ exports[`renderInput prioritizes error over help 4`] = `
   <div
     className="uk-form-controls"
   >
-    <input
+    <Input
       autoComplete="username"
-      className="uk-form-danger"
+      danger={true}
+      icon={undefined}
       id="email"
       name="email"
       onBlur={[Function]}
@@ -185,77 +198,25 @@ exports[`renderInput prioritizes error over help 4`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
-    <p
-      className="uk-form-help-block"
+    <div
+      className="uk-text-danger uk-block uk-margin-bottom"
     >
       Errors have precedence.
-    </p>
+    </div>
   </div>
 </div>
 `;
 
-exports[`renderInput renders asyncValidating status correctly 1`] = `
+exports[`renders asyncValidating status correctly 1`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <div
-    className="uk-form-icon"
-  >
-    <i
-      className="uk-icon-spinner uk-icon-spin"
-    />
-    <input
-      autoComplete="username"
-      className=""
-      id={undefined}
-      name="email"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onDragStart={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
-      placeholder="E-mail"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`renderInput renders asyncValidating status correctly 2`] = `
-<div
-  className="uk-form-row"
->
-  <div
-    className="uk-form-icon uk-form-icon-flip"
-  >
-    <i
-      className="uk-icon-spinner uk-icon-spin"
-    />
-    <input
-      autoComplete="username"
-      className=""
-      id={undefined}
-      name="email"
-      onBlur={[Function]}
-      onChange={[Function]}
-      onDragStart={[Function]}
-      onDrop={[Function]}
-      onFocus={[Function]}
-      placeholder="E-mail"
-      value=""
-    />
-  </div>
-</div>
-`;
-
-exports[`renderInput renders correctly 1`] = `
-<div
-  className="uk-form-row"
->
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon="spinner"
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -265,13 +226,59 @@ exports[`renderInput renders correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
 
-exports[`renderInput renders correctly 2`] = `
+exports[`renders asyncValidating status correctly 2`] = `
 <div
-  className="uk-display-inline-block"
+  className="uk-margin"
+>
+  <Input
+    autoComplete="username"
+    danger={false}
+    flip={true}
+    icon="spinner"
+    id={undefined}
+    name="email"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder="E-mail"
+    value=""
+    width={false}
+  />
+</div>
+`;
+
+exports[`renders correctly 1`] = `
+<div
+  className="uk-margin"
+>
+  <Input
+    autoComplete="username"
+    danger={false}
+    icon={undefined}
+    id={undefined}
+    name="email"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onDragStart={[Function]}
+    onDrop={[Function]}
+    onFocus={[Function]}
+    placeholder="E-mail"
+    value=""
+    width={false}
+  />
+</div>
+`;
+
+exports[`renders correctly 2`] = `
+<div
+  className="uk-inline"
 >
   <label
     className="uk-form-label"
@@ -282,9 +289,10 @@ exports[`renderInput renders correctly 2`] = `
   <div
     className="uk-form-controls"
   >
-    <input
+    <Input
       autoComplete="username"
-      className=""
+      danger={false}
+      icon={undefined}
       id="email"
       name="email"
       onBlur={[Function]}
@@ -295,18 +303,20 @@ exports[`renderInput renders correctly 2`] = `
       placeholder="E-mail"
       type="email"
       value=""
+      width={false}
     />
   </div>
 </div>
 `;
 
-exports[`renderInput renders error messages correctly 1`] = `
+exports[`renders error messages correctly 1`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -316,17 +326,19 @@ exports[`renderInput renders error messages correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
 
-exports[`renderInput renders error messages correctly 2`] = `
+exports[`renders error messages correctly 2`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className="uk-form-danger"
+    danger={true}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -336,22 +348,24 @@ exports[`renderInput renders error messages correctly 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline"
+  <div
+    className="uk-text-danger uk-inline uk-margin-small-left"
   >
     Shows error if touched.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput renders error messages correctly 3`] = `
+exports[`renders error messages correctly 3`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className="uk-form-danger"
+    danger={true}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -361,22 +375,24 @@ exports[`renderInput renders error messages correctly 3`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline uk-text-danger"
+  <div
+    className="uk-text-danger uk-inline uk-margin-small-left uk-text-danger"
   >
     Allows custom className on error container.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput renders error messages correctly 4`] = `
+exports[`renders error messages correctly 4`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className="uk-form-danger"
+    danger={true}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -386,18 +402,19 @@ exports[`renderInput renders error messages correctly 4`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-block"
+  <div
+    className="uk-text-danger uk-block uk-margin-bottom"
   >
     Support rendering error message in a block beneath the field.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput renders error messages correctly 5`] = `
+exports[`renders error messages correctly 5`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
   <label
     className="uk-form-label"
@@ -408,9 +425,10 @@ exports[`renderInput renders error messages correctly 5`] = `
   <div
     className="uk-form-controls"
   >
-    <input
+    <Input
       autoComplete="username"
-      className="uk-form-danger"
+      danger={true}
+      icon={undefined}
       id="email"
       name="email"
       onBlur={[Function]}
@@ -420,19 +438,20 @@ exports[`renderInput renders error messages correctly 5`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
-    <p
-      className="uk-form-help-inline"
+    <div
+      className="uk-text-danger uk-inline uk-margin-small-left"
     >
       Neatly renders error in input control group.
-    </p>
+    </div>
   </div>
 </div>
 `;
 
-exports[`renderInput renders error messages correctly 6`] = `
+exports[`renders error messages correctly 6`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
   <label
     className="uk-form-label"
@@ -443,9 +462,10 @@ exports[`renderInput renders error messages correctly 6`] = `
   <div
     className="uk-form-controls"
   >
-    <input
+    <Input
       autoComplete="username"
-      className="uk-form-danger"
+      danger={true}
+      icon={undefined}
       id="email"
       name="email"
       onBlur={[Function]}
@@ -455,23 +475,25 @@ exports[`renderInput renders error messages correctly 6`] = `
       onFocus={[Function]}
       placeholder="E-mail"
       value=""
+      width={false}
     />
-    <p
-      className="uk-form-help-block"
+    <div
+      className="uk-text-danger uk-block uk-margin-bottom"
     >
       Support rendering error message in a block beneath the field.
-    </p>
+    </div>
   </div>
 </div>
 `;
 
-exports[`renderInput renders help messages correctly 1`] = `
+exports[`renders help messages correctly 1`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -481,22 +503,24 @@ exports[`renderInput renders help messages correctly 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline"
+  <div
+    className="uk-inline uk-margin-small-left"
   >
     Friendly message to delight the human.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput renders help messages correctly 2`] = `
+exports[`renders help messages correctly 2`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -506,22 +530,24 @@ exports[`renderInput renders help messages correctly 2`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline uk-text-warning"
+  <div
+    className="uk-inline uk-margin-small-left uk-text-warning"
   >
     Supports custom className on help message.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput renders help messages correctly 3`] = `
+exports[`renders help messages correctly 3`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -531,22 +557,24 @@ exports[`renderInput renders help messages correctly 3`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-block"
+  <div
+    className="uk-block uk-margin-bottom"
   >
     Possible to render below field.
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput renders help messages correctly 4`] = `
+exports[`renders help messages correctly 4`] = `
 <div
-  className="uk-form-row"
+  className="uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -556,9 +584,10 @@ exports[`renderInput renders help messages correctly 4`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
-  <p
-    className="uk-form-help-inline"
+  <div
+    className="uk-inline uk-margin-small-left"
   >
     <strong>
       Help attribute can render anything 
@@ -567,17 +596,18 @@ exports[`renderInput renders help messages correctly 4`] = `
       </code>
        can render.
     </strong>
-  </p>
+  </div>
 </div>
 `;
 
-exports[`renderInput supports custom wrapper className 1`] = `
+exports[`supports custom wrapper className 1`] = `
 <div
-  className="uk-display-inline-block uk-form-row"
+  className="uk-display-inline-block uk-margin"
 >
-  <input
+  <Input
     autoComplete="username"
-    className=""
+    danger={false}
+    icon={undefined}
     id={undefined}
     name="email"
     onBlur={[Function]}
@@ -587,6 +617,7 @@ exports[`renderInput supports custom wrapper className 1`] = `
     onFocus={[Function]}
     placeholder="E-mail"
     value=""
+    width={false}
   />
 </div>
 `;
