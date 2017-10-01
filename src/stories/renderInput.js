@@ -15,7 +15,7 @@ Button.displayName = 'Button'
 const { input: skipInput, meta: skipMeta, ...renderInputPropTypes } = renderInput.propTypes
 const { danger: skipDanger, success: skipSuccess, ...InputPropTypes } = Input.propTypes
 
-/* eslint-enable*/
+/* eslint-enable */
 const InputProps = () => <input />
 InputProps.propTypes = {
   ...InputPropTypes,
