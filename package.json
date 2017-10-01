@@ -30,6 +30,12 @@
     "changelog:commit": "sr-changelog commit",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
+  "release": {
+    "analyzeCommits": "semantic-release-tamia/analyzeCommits",
+    "verifyConditions": "condition-circle",
+    "generateNotes": "semantic-release-tamia/generateNotes",
+    "verifyRelease": "semantic-release-tamia/verifyRelease"
+  },
   "jest": {
     "coverageReporters": [
       "lcov"
